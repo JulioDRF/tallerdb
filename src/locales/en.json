@@ -1,3 +1,7 @@
 {
-  "message": "hello i18n !!"
+  "aboutUs": "About Us",
+  "darkMode": "Dark Mode",
+  "home": "Home",
+  "language": "Language",
+  "welcomeToTallerDB": "Welcome to TallerDB"
 }
