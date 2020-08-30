@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <v-app id="vuetify-app"
+    <v-app
+      id="vuetify-app"
       :style="stylesOverride"
     >
-      <TheNavigationWrapper></TheNavigationWrapper>
+      <TheNavigationWrapper />
       <v-main>
         <v-container
           class="fill-height"
@@ -14,12 +15,12 @@
             justify="center"
           >
             <v-col>
-              <router-view/>
+              <router-view />
             </v-col>
           </v-row>
         </v-container>
       </v-main>
-      <TheFooter></TheFooter>
+      <TheFooter />
     </v-app>
   </div>
 </template>
@@ -27,6 +28,7 @@
 <script>
 import TheFooter from '@/components/TheFooter';
 import TheNavigationWrapper from '@/components/TheNavigationWrapper';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
   name: 'App',
@@ -35,12 +37,22 @@ export default {
     TheFooter
   },
   computed: {
+    ...mapGetters([
+      'backgroundColor'
+    ]),
     stylesOverride() {
-      const theme = this.$vuetify.theme.dark ? 'dark' : 'light';
       return { 
-        background: this.$vuetify.theme.themes[theme].background
-      };
+        background: this.backgroundColor
+      }
     }
+  },
+  created() {
+    this.restoreSavedState();
+  },
+  methods: {
+    ...mapActions([
+      'restoreSavedState'
+    ])
   }
 }
 </script>

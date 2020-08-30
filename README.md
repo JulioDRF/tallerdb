@@ -1,4 +1,8 @@
-# tallerdb
+# Taller DB
+Taller DB's official website. It serves as a portfolio and contains contact information
+for anyone who wishes to reach the architecture firm.
+
+Live version at: https://tallerdb.com/
 
 ## Project setup
 ```

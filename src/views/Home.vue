@@ -1,12 +1,18 @@
 <template>
   <div class="home">
-    <v-container fluid fill-height>
-      <v-row class="text-center" no-gutters>
+    <v-container
+      fluid
+      fill-height
+    >
+      <v-row
+        class="text-center"
+        no-gutters
+      >
         <v-col class="mb-1">
-          <TheHomeSlideshow></TheHomeSlideshow>
+          <TheHomeSlideshow />
         </v-col>
       </v-row>
-  </v-container>
+    </v-container>
   </div>
 </template>
 

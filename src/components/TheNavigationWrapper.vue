@@ -1,13 +1,11 @@
 <template>
   <div id="the-navigation-wrapper">
     <TheNavigationBar
-      :toggleDrawer="toggleDrawer"
-    >
-    </TheNavigationBar>
+      :toggle-drawer="toggleDrawer"
+    />
     <TheNavigationDrawer
-      :drawerIsVisible="drawerIsVisible"
-    >
-    </TheNavigationDrawer>
+      :drawer-is-visible="drawerIsVisible"
+    />
   </div>
 </template>
 

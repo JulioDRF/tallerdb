@@ -1,10 +1,10 @@
 <template>
   <div class="the-home-slideshow">
     <v-img
-      v-for="(src, i) in images"
-      :key="src"
+      v-for="(p, i) in projects"
+      :key="p.projectId"
       :class="computeClass(i)"
-      :src="src"
+      :src="p.imgSrc"
       min-height="90vh"
       max-height="100%"
       min-width="90%"
@@ -14,36 +14,39 @@
 </template>
 
 <script>
-const images = require('@/assets/images/sources.json').images;
-
+import { mapState } from 'vuex';
 export default {
   name: 'TheHomeSlideshow',
   data() {
     return {
-      images,
-      currentImageIndex: 0,
+      currentProjectIndex: 0,
       intervalId: null
     }
   },
-  methods: {
-    computeClass(index) {
-      if (index === this.currentImageIndex) {
-        return 'home-img';
-      } else {
-        return 'home-img hidden';
-      }
-    }
+  computed: {
+    ...mapState([
+      'projects'
+    ])
   },
   mounted() {
     this.intervalId = window.setInterval(() => {
-      this.currentImageIndex++;
-      if (this.currentImageIndex >= this.images.length) {
-        this.currentImageIndex = 0;
+      this.currentProjectIndex++;
+      if (this.currentProjectIndex >= this.projects.length) {
+        this.currentProjectIndex = 0;
       }
     }, 5000);
   },
   destroyed() {
     window.clearInterval(this.intervalId);
+  },
+  methods: {
+    computeClass(index) {
+      if (index === this.currentProjectIndex) {
+        return 'home-img';
+      } else {
+        return 'home-img hidden';
+      }
+    }
   }
 }
 </script>

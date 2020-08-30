@@ -16,7 +16,7 @@
       </v-list-item>
       <v-list-item to="/about">
         <v-list-item-action>
-          <v-icon> {{icons.mdiInformation }}</v-icon>
+          <v-icon>{{ icons.mdiInformation }}</v-icon>
         </v-list-item-action>
         <v-list-item-content>
           <v-list-item-title>{{ $t('aboutUs') }}</v-list-item-title>
@@ -24,7 +24,7 @@
       </v-list-item>
       <v-list-item to="/projects">
         <v-list-item-action>
-          <v-icon> {{icons.mdiPencilRuler }}</v-icon>
+          <v-icon>{{ icons.mdiPencilRuler }}</v-icon>
         </v-list-item-action>
         <v-list-item-content>
           <v-list-item-title>{{ $t('projects') }}</v-list-item-title>
@@ -32,7 +32,7 @@
       </v-list-item>
       <v-list-item to="/contact">
         <v-list-item-action>
-          <v-icon> {{icons.mdiMessageOutline }}</v-icon>
+          <v-icon>{{ icons.mdiMessageOutline }}</v-icon>
         </v-list-item-action>
         <v-list-item-content>
           <v-list-item-title>{{ $t('contact') }}</v-list-item-title>
@@ -40,7 +40,7 @@
       </v-list-item>
       <v-list-item to="/blog">
         <v-list-item-action>
-          <v-icon> {{icons.mdiBookOpenVariant }}</v-icon>
+          <v-icon>{{ icons.mdiBookOpenVariant }}</v-icon>
         </v-list-item-action>
         <v-list-item-content>
           <v-list-item-title>{{ $t('blog') }}</v-list-item-title>
@@ -48,11 +48,13 @@
       </v-list-item>
       <v-list-item @click="toggleDarkMode">
         <v-list-item-action>
-          <v-switch :value="$vuetify.theme.dark"></v-switch>
+          <v-switch :value="darkModeEnabled" />
         </v-list-item-action>
         <v-list-item-content>
           <v-list-item-title>
-            <v-icon small>{{ icons.mdiMoonWaningCrescent }}</v-icon>
+            <v-icon small>
+              {{ icons.mdiMoonWaningCrescent }}
+            </v-icon>
             {{ $t('darkMode') }}
           </v-list-item-title>
         </v-list-item-content>
@@ -64,9 +66,10 @@
         <v-list-item-content>
           <v-select
             :items="locales"
-            v-model="$i18n.locale"
+            :value="locale"
             :label="$t('language')"
-          ></v-select>
+            @change="setLocale"
+          />
         </v-list-item-content>
       </v-list-item>
     </v-list>
@@ -83,6 +86,7 @@ import {
   mdiMoonWaningCrescent,
   mdiPencilRuler,
 } from '@mdi/js';
+import { mapActions, mapState } from 'vuex'
 
 export default {
   name: 'TheNavigationDrawer',
@@ -99,23 +103,21 @@ export default {
         mdiMessageOutline,
         mdiMoonWaningCrescent,
         mdiPencilRuler,
-      },
-      locales: [
-        {
-          text: 'English',
-          value: 'en'
-        },
-        {
-          text: 'Español',
-          value: 'es'
-        }
-      ]
+      }
     }
   },
+  computed: {
+    ...mapState([
+      'darkModeEnabled',
+      'locale',
+      'locales'
+    ]),
+  },
   methods: {
-    toggleDarkMode() {
-      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-    }
+    ...mapActions([
+      'toggleDarkMode',
+      'setLocale'
+    ])
   }
 }
 </script>
