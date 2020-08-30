@@ -7,6 +7,7 @@
   >
     <v-btn
       to="/"
+      class="navbar-logo-btn"
       active-class="navbar-logo-btn-active"
       text
     >
@@ -26,7 +27,7 @@
       <v-tab to="/blog">{{ $t('blog') }}</v-tab>
     </v-tabs>
 
-    <v-app-bar-nav-icon @click.stop="toggleDrawer"></v-app-bar-nav-icon>
+    <v-app-bar-nav-icon id="hamburger-icon" @click.stop="toggleDrawer"></v-app-bar-nav-icon>
   </v-app-bar>
 </template>
 
@@ -52,7 +53,10 @@ export default {
   max-width: 10rem;
 }
 .navbar-logo-btn {
-  margin-left: 2rem;
+  margin-left: 3.5%;
+}
+#hamburger-icon {
+  margin-right: 3.5%;
 }
 .navbar-logo-btn-active, .navbar-logo-btn-active::before {
   background-color: transparent !important;

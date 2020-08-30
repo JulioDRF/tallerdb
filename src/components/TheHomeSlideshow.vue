@@ -5,8 +5,10 @@
       :key="src"
       :class="computeClass(i)"
       :src="src"
-      min-height="80vh"
-      min-width="80vmin"
+      min-height="90vh"
+      max-height="100%"
+      min-width="90%"
+      max-width="95%"
     />
   </div>
 </template>
@@ -49,9 +51,9 @@ export default {
 <style>
 .home-img {
   position: absolute;
-  top: 0;
   left: 50%;
-  transform: translate(-50%, 0);
+  top: 50%;
+  transform: translate(-50%, -50%);
   mask-image: url('../assets/images/taller-db-mask.svg');
   mask-size: 100%;
   mask-repeat: no-repeat;
