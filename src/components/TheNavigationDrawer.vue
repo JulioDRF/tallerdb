@@ -48,7 +48,7 @@
       </v-list-item>
       <v-list-item @click="toggleDarkMode">
         <v-list-item-action>
-          <v-switch :value="darkModeEnabled" />
+          <v-switch v-model="darkModeEnabled" />
         </v-list-item-action>
         <v-list-item-content>
           <v-list-item-title>
