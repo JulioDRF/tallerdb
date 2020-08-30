@@ -1,6 +1,6 @@
 <template>
   <v-navigation-drawer
-    v-model="drawerIsVisible"
+    :value="drawerIsVisible"
     app
     clipped-right
     right
