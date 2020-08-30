@@ -1,16 +1,22 @@
 <template>
   <div class="home">
-    <HelloWorld :message="$t('welcomeToTallerDB')"/>
+    <v-container fluid fill-height>
+      <v-row class="text-center" no-gutters>
+        <v-col class="mb-1">
+          <TheHomeSlideshow></TheHomeSlideshow>
+        </v-col>
+      </v-row>
+  </v-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
+import TheHomeSlideshow from '@/components/TheHomeSlideshow';
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    TheHomeSlideshow
   }
 }
 </script>
