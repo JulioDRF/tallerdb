@@ -2,7 +2,8 @@
   <v-navigation-drawer
     v-model="drawerIsVisible"
     app
-    clipped
+    clipped-right
+    right
   >
     <v-list dense>
       <v-list-item to="/">
@@ -19,6 +20,30 @@
         </v-list-item-action>
         <v-list-item-content>
           <v-list-item-title>{{ $t('aboutUs') }}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item to="/projects">
+        <v-list-item-action>
+          <v-icon> {{icons.mdiPencilRuler }}</v-icon>
+        </v-list-item-action>
+        <v-list-item-content>
+          <v-list-item-title>{{ $t('projects') }}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item to="/contact">
+        <v-list-item-action>
+          <v-icon> {{icons.mdiMessageOutline }}</v-icon>
+        </v-list-item-action>
+        <v-list-item-content>
+          <v-list-item-title>{{ $t('contact') }}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item to="/blog">
+        <v-list-item-action>
+          <v-icon> {{icons.mdiBookOpenVariant }}</v-icon>
+        </v-list-item-action>
+        <v-list-item-content>
+          <v-list-item-title>{{ $t('blog') }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
       <v-list-item @click="toggleDarkMode">
@@ -49,7 +74,15 @@
 </template>
 
 <script>
-import { mdiMoonWaningCrescent, mdiInformation, mdiHome, mdiEarth } from '@mdi/js'
+import {
+  mdiBookOpenVariant,
+  mdiEarth,
+  mdiInformation,
+  mdiHome,
+  mdiMessageOutline,
+  mdiMoonWaningCrescent,
+  mdiPencilRuler,
+} from '@mdi/js';
 
 export default {
   name: 'TheNavigationDrawer',
@@ -59,10 +92,13 @@ export default {
   data() {
     return {
       icons: {
-        mdiMoonWaningCrescent,
+        mdiBookOpenVariant,
+        mdiEarth,
         mdiInformation,
         mdiHome,
-        mdiEarth
+        mdiMessageOutline,
+        mdiMoonWaningCrescent,
+        mdiPencilRuler,
       },
       locales: [
         {

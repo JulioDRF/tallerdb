@@ -1,7 +1,11 @@
 {
   "aboutUs": "Acerca de Nosotros",
+  "blog": "Blog",
+  "contact": "Contacto",
   "darkMode": "Modo Oscuro",
   "home": "Inicio",
   "language": "Lenguaje",
+  "pageNotFound": "Página No Encontrada",
+  "projects": "Proyectos",
   "welcomeToTallerDB": "Bienvenido a Taller DB"
 }

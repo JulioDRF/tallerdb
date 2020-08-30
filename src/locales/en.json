@@ -1,7 +1,11 @@
 {
   "aboutUs": "About Us",
+  "blog": "Blog",
+  "contact": "Contact Us",
   "darkMode": "Dark Mode",
   "home": "Home",
   "language": "Language",
+  "pageNotFound": "Page Not Found",
+  "projects": "Projects",
   "welcomeToTallerDB": "Welcome to Taller DB"
 }
