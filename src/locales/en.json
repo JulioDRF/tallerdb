@@ -7,5 +7,22 @@
   "language": "Language",
   "pageNotFound": "Page Not Found",
   "projects": "Projects",
-  "welcomeToTallerDB": "Welcome to Taller DB"
+  "welcomeToTallerDB": "Welcome to Taller DB",
+  "project": {
+    "ampliacionCalimaya": {
+      "name": "Ampliación Calimaya"
+    },
+    "torreAnzures": {
+      "name": "Torre Anzures"
+    },
+    "casaEspiga": {
+      "name": "Casa Espiga"
+    },
+    "plazaCalli": {
+      "name": "Plaza Calli"
+    },
+    "casaHorizonte": {
+      "name": "Casa Horizonte"
+    }
+  }
 }
