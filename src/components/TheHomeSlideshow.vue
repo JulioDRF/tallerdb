@@ -7,8 +7,8 @@
       :src="p.imgSrc"
       min-height="90vh"
       max-height="100%"
-      min-width="90%"
-      max-width="95%"
+      min-width="75%"
+      max-width="90%"
     />
   </div>
 </template>

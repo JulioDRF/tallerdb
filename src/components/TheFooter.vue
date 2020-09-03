@@ -1,6 +1,6 @@
 <template>
   <v-footer app>
-    <span>&copy; {{ new Date().getFullYear() }} Taller DB</span>
+    <span class="ml-auto" id="copyright-msg">&copy; {{ new Date().getFullYear() }} Taller DB</span>
   </v-footer>
 </template>
 
@@ -9,3 +9,10 @@ export default {
   name: 'TheFooter'
 }
 </script>
+
+<style scoped>
+#copyright-msg {
+  font-size: 12;
+  color: gray;
+}
+</style>

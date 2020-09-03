@@ -8,7 +8,7 @@
         class="text-center"
         no-gutters
       >
-        <v-col class="mb-1">
+        <v-col md="8">
           <TheHomeSlideshow />
         </v-col>
       </v-row>
