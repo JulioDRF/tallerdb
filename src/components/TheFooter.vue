@@ -1,12 +1,26 @@
 <template>
-  <v-footer app>
-    <span class="ml-auto" id="copyright-msg">&copy; {{ new Date().getFullYear() }} Taller DB</span>
+  <v-footer
+    app
+    :color="backgroundColor"
+  >
+    <span
+      id="copyright-msg"
+      class="ml-auto"
+    >
+      &copy; {{ new Date().getFullYear() }} Taller DB
+    </span>
   </v-footer>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-  name: 'TheFooter'
+  name: 'TheFooter',
+  computed: {
+    ...mapGetters([
+      'backgroundColor'
+    ])
+  }
 }
 </script>
 

@@ -7,14 +7,13 @@
   >
     <v-btn
       to="/"
-      class="navbar-logo-btn pa-0"
+      class="navbar-logo-btn pt-2 px-0"
       active-class="navbar-logo-btn-active"
       text
     >
       <v-img
         id="navbar-logo"
         :src="logoSource"
-        height="2rem"
         contain
       />
     </v-btn>
@@ -73,7 +72,7 @@ export default {
 <style>
 #navbar-logo {
   max-width: 10rem;
-  margin-top: -1rem;
+  margin-bottom: 1rem;
 }
 
 @media only screen and (min-width: 1264px) {
