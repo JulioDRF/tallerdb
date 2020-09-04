@@ -6,8 +6,8 @@
     flat
   >
     <v-btn
-      to="/"
       id="navbar-logo-btn"
+      to="/"
       active-class="navbar-logo-btn-active"
       text
     >

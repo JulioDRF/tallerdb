@@ -7,6 +7,7 @@ const Contact = () => import(/* webpackChunkName: "contact" */ '@/views/Contact.
 const Home = () => import(/* webpackChunkName: "home" */ '@/views/Home.vue');
 const NotFound = () => import(/* webpackChunkName: "notFound" */ '@/views/NotFound.vue');
 const Projects = () => import(/* webpackChunkName: "projects" */ '@/views/Projects.vue');
+const Project = () => import(/* webpackChunkName: "project" */ '@/views/Project.vue');
 
 Vue.use(VueRouter)
 
@@ -30,6 +31,11 @@ const routes = [
     path: '/projects',
     name: 'projects',
     component: Projects
+  },
+  {
+    path: '/project/:id',
+    name: 'project',
+    component: Project
   },
   {
     path: '/',

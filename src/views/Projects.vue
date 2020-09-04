@@ -13,7 +13,12 @@
                 cols="6"
               >
                 <v-hover v-slot:default="{ hover }">
-                  <v-card flat tile class="d-flex">
+                  <v-card
+                    flat
+                    tile
+                    class="d-flex"
+                    @click="handleClick(p)"
+                  >
                     <v-img
                       :src="p.mainImage"
                       aspect-ratio="1"
@@ -43,15 +48,15 @@
 import { mapState } from 'vuex';
 export default {
   name: 'Projects',
-  data() {
-    return {
-     
-    }
-  },
   computed: {
     ...mapState([
       'projects'
     ])
+  },
+  methods:{
+    handleClick(project) {
+      this.$router.push(`/project/${project.projectId}`)
+    }
   }
 }
 </script>

@@ -1,6 +1,9 @@
 <template>
   <div class="the-home-slideshow">
-  <v-container fluid fill-height>
+    <v-container
+      fluid
+      fill-height
+    >
       <v-row
         justify="center"
         align="start"
@@ -22,6 +25,7 @@
                 width="100%"
                 class="home-img"
                 :src="currentProject.mainImage"
+                @click="handleClick"
               >
                 <v-fade-transition>
                   <div
@@ -69,6 +73,11 @@ export default {
   },
   destroyed() {
     window.clearInterval(this.intervalId);
+  },
+  methods:{
+    handleClick() {
+      this.$router.push(`/project/${this.currentProject.projectId}`)
+    }
   }
 }
 </script>
