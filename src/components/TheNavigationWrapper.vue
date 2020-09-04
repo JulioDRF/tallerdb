@@ -1,31 +1,33 @@
 <template>
   <div id="the-navigation-wrapper">
     <TheNavigationBar
-      :toggle-drawer="toggleDrawer"
+      :toggle-menu="toggleMenu"
+      :show-menu="menuIsVisible"
     />
-    <TheNavigationDrawer
-      :drawer-is-visible="drawerIsVisible"
+    <TheNavigationOverlay
+      :toggle-menu="toggleMenu"
+      :show-menu="menuIsVisible"
     />
   </div>
 </template>
 
 <script>
 import TheNavigationBar from '@/components/TheNavigationBar';
-import TheNavigationDrawer from '@/components/TheNavigationDrawer';
+import TheNavigationOverlay from '@/components/TheNavigationOverlay';
 export default {
   name: 'TheNavigationWrapper',
   components: {
     TheNavigationBar,
-    TheNavigationDrawer
+    TheNavigationOverlay
   },
   data() {
     return {
-      drawerIsVisible: false
+      menuIsVisible: false
     }
   },
   methods: {
-    toggleDrawer() {
-      this.drawerIsVisible = !this.drawerIsVisible;
+    toggleMenu() {
+      this.menuIsVisible = !this.menuIsVisible;
     }
   }
 }

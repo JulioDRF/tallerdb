@@ -21,40 +21,114 @@
 
     <v-spacer />
 
-    <v-tabs
-      class="hidden-sm-and-down"
-      right
-      optional
-    >
-      <v-tab to="/about">
-        {{ $t('aboutUs') }}
-      </v-tab>
-      <v-tab to="/projects">
-        {{ $t('projects') }}
-      </v-tab>
-      <v-tab to="/contact">
-        {{ $t('contact') }}
-      </v-tab>
-      <v-tab to="/blog">
-        {{ $t('blog') }}
-      </v-tab>
-    </v-tabs>
+    <transition name="slide">
+      <v-tabs
+        v-show="showMenu"
+        :value="selectedTab"
+        class="hidden-sm-and-down"
+        right
+        optional
+      >
+        <v-tab
+          key="about"
+          to="/about"
+        >
+          {{ $t('aboutUs') }}
+        </v-tab>
+        <v-tab
+          key="projects"
+          to="/projects"
+        >
+          {{ $t('projects') }}
+        </v-tab>
+        <v-tab
+          key="contact"
+          to="/contact"
+        >
+          {{ $t('contact') }}
+        </v-tab>
+        <v-tab
+          key="blog"
+          to="/blog"
+        >
+          {{ $t('blog') }}
+        </v-tab>
+        <v-menu
+          transition="scale-transition"
+        >
+          <template v-slot:activator="{ on }">
+            <v-tab
+              v-on="on"
+            >
+              <v-icon small>
+                {{ icons.mdiCogOutline }}
+              </v-icon>
+              {{ $t('settings') }}
+            </v-tab>
+          </template>
+    
+          <v-list>
+            <v-list-item @click.stop="toggleDarkMode">
+              <v-list-item-action>
+                <v-switch v-model="darkModeEnabled" />
+              </v-list-item-action>
+              <v-list-item-content>
+                <v-list-item-title>
+                  <v-icon small>
+                    {{ icons.mdiMoonWaningCrescent }}
+                  </v-icon>
+                  {{ $t('darkMode') }}
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item @click.stop>
+              <v-list-item-action>
+                <v-icon> {{ icons.mdiEarth }}</v-icon>
+              </v-list-item-action>
+              <v-list-item-content>
+                <v-select
+                  :items="locales"
+                  :value="locale"
+                  :label="$t('language')"
+                  @change="setLocale"
+                />
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+      </v-tabs>
+    </transition>
 
     <v-app-bar-nav-icon
       id="hamburger-icon"
-      @click.stop="toggleDrawer"
+      @click.stop="toggleMenu"
     />
   </v-app-bar>
 </template>
 
 <script>
-import { mapGetters, mapState } from 'vuex';
+import { mapActions, mapGetters, mapState } from 'vuex';
+import {
+  mdiCogOutline,
+  mdiEarth,
+  mdiMoonWaningCrescent
+} from '@mdi/js';
 export default {
   name: 'TheNavigationBar',
   props: {
-    toggleDrawer: {
+    toggleMenu: {
       type: Function,
       required: true
+    },
+    showMenu: Boolean
+  },
+  data() {
+    return {
+      icons: {
+        mdiCogOutline,
+        mdiEarth,
+        mdiMoonWaningCrescent
+      }
     }
   },
   computed: {
@@ -62,12 +136,23 @@ export default {
       'backgroundColor'
     ]),
     ...mapState([
-      'darkModeEnabled'
+      'darkModeEnabled',
+      'locale',
+      'locales'
     ]),
     logoSource() {
       return this.darkModeEnabled ? require('../assets/images/taller-db-logo-inverted.svg') : require('../assets/images/taller-db-logo.svg');
+    },
+    selectedTab() {
+      return this.$route.path.split('/')[1]
     }
   },
+  methods: {
+    ...mapActions([
+      'toggleDarkMode',
+      'setLocale'
+    ])
+  }
 }
 </script>
 <style>
@@ -82,6 +167,14 @@ export default {
   background-color: transparent !important;
 }
 #navbar-logo-btn:hover::before {
+  opacity: 0;
+}
+.slide-enter-active, .slide-leave-active {
+  transition: all 0.5s;
+}
+.slide-enter,
+.slide-leave-to {
+  transform: translateX(100px);
   opacity: 0;
 }
 
