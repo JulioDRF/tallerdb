@@ -7,7 +7,7 @@
   >
     <v-btn
       to="/"
-      class="navbar-logo-btn pt-2 px-0"
+      id="navbar-logo-btn"
       active-class="navbar-logo-btn-active"
       text
     >
@@ -15,6 +15,7 @@
         id="navbar-logo"
         :src="logoSource"
         contain
+        min-height="3rem"
       />
     </v-btn>
 
@@ -74,16 +75,22 @@ export default {
   max-width: 10rem;
   margin-bottom: 1rem;
 }
+#navbar-logo-btn {
+  padding: 0;
+}
+.navbar-logo-btn-active::before {
+  background-color: transparent !important;
+}
+#navbar-logo-btn:hover::before {
+  opacity: 0;
+}
 
 @media only screen and (min-width: 1264px) {
-  .navbar-logo-btn {
-    margin-left: 12%;
+  #navbar-logo-btn {
+    margin-left: 13%;
   }
   #hamburger-icon {
-    margin-right: 12%;
+    margin-right: 13%;
   }
-}
-.navbar-logo-btn-active, .navbar-logo-btn-active::before {
-  background-color: transparent !important;
 }
 </style>

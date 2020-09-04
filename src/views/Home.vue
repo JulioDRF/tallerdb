@@ -1,18 +1,6 @@
 <template>
   <div class="home">
-    <v-container
-      fluid
-      fill-height
-    >
-      <v-row
-        class="text-center"
-        no-gutters
-      >
-        <v-col md="8">
-          <TheHomeSlideshow />
-        </v-col>
-      </v-row>
-    </v-container>
+    <TheHomeSlideshow />
   </div>
 </template>
 

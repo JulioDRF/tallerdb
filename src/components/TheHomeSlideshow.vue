@@ -1,15 +1,43 @@
 <template>
   <div class="the-home-slideshow">
-    <v-img
-      v-for="(p, i) in projects"
-      :key="p.projectId"
-      :class="computeClass(i)"
-      :src="p.imgSrc"
-      min-height="90vh"
-      max-height="100%"
-      min-width="75%"
-      max-width="90%"
-    />
+  <v-container fluid fill-height>
+      <v-row
+        justify="center"
+        align="start"
+        no-gutters
+      >
+        <v-col
+          md="9"
+          class="relative"
+        >
+          <v-hover v-slot:default="{ hover }">
+            <transition
+              name="fade"
+            >
+              <v-img
+                :key="currentProject.projectId"
+                min-height="1vh"
+                height="80vh"
+                min-width="1vw"
+                width="100%"
+                class="home-img"
+                :src="currentProject.mainImage"
+              >
+                <v-fade-transition>
+                  <div
+                    v-if="hover"
+                    class="d-flex transition-fast-in-fast-out info-overlay white--text"
+                    style="height: 100%;"
+                  >
+                    <span>{{ $t('project.' + currentProject.projectId + '.name') }}</span>
+                  </div>
+                </v-fade-transition>
+              </v-img>
+            </transition>
+          </v-hover>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -26,7 +54,10 @@ export default {
   computed: {
     ...mapState([
       'projects'
-    ])
+    ]),
+    currentProject() {
+      return this.projects[this.currentProjectIndex];
+    }
   },
   mounted() {
     this.intervalId = window.setInterval(() => {
@@ -38,33 +69,47 @@ export default {
   },
   destroyed() {
     window.clearInterval(this.intervalId);
-  },
-  methods: {
-    computeClass(index) {
-      if (index === this.currentProjectIndex) {
-        return 'home-img';
-      } else {
-        return 'home-img hidden';
-      }
-    }
   }
 }
 </script>
 
-<style>
+<style scoped>
+.relative {
+  position: relative;
+}
 .home-img {
   position: absolute;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(0, -50%);
   mask-image: url('../assets/images/taller-db-mask.svg');
   mask-size: 100%;
   mask-repeat: no-repeat;
   mask-position: center;
-  transition: opacity 2s ease-in-out;
 }
-
-.hidden {
+.fade-leave-active, .fade-enter-active {
+  transition: opacity 1s ease-in;
+}
+.fade-enter, .fade-leave-to {
   opacity: 0;
+}
+.info-overlay {
+  position: absolute;
+  align-items: center;
+  justify-content: start;
+  bottom: 0;
+  width: 100%;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+}
+.info-overlay > span {
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+@media only screen and (min-width: 1264px) {
+  .info-overlay > span {
+    padding-left: 2rem;
+    font-size: 3rem;
+  }
 }
 </style>
