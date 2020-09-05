@@ -1,9 +1,6 @@
 <template>
   <div class="the-home-slideshow">
-    <v-container
-      fluid
-      fill-height
-    >
+    <v-container fluid>
       <v-row
         justify="center"
         align="start"

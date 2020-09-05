@@ -8,7 +8,7 @@
               <v-col
                 v-for="p in projects"
                 :key="p.projectId"
-                class="d-flex child-flex"
+                class="d-flex child-flex pl-0 pr-5"
                 md="4"
                 cols="6"
               >
@@ -23,7 +23,20 @@
                       :src="p.mainImage"
                       aspect-ratio="1"
                       class="grey lighten-2"
-                    />
+                    >
+                      <template v-slot:placeholder>
+                        <v-row
+                          class="fill-height ma-0 grey darken-1"
+                          align="center"
+                          justify="center"
+                        >
+                          <v-progress-circular
+                            indeterminate
+                            color="grey lighten-5"
+                          />
+                        </v-row>
+                      </template>
+                    </v-img>
                     <v-fade-transition>
                       <div
                         v-if="hover"

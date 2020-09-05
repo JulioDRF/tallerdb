@@ -79,7 +79,10 @@
           </v-list-item>
           <v-list-item @click="toggleDarkMode">
             <v-list-item-action>
-              <v-switch :value="darkModeEnabled" />
+              <v-switch
+                :input-value="darkModeEnabled"
+                :value="darkModeEnabled"
+              />
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title>
@@ -95,12 +98,15 @@
               <v-icon> {{ icons.mdiEarth }}</v-icon>
             </v-list-item-action>
             <v-list-item-content>
-              <v-select
-                :items="locales"
-                :value="locale"
-                :label="$t('language')"
-                @change="setLocale"
-              />
+              <v-tabs :value="localeIndex">
+                <v-tab
+                  v-for="lang in locales"
+                  :key="lang.value"
+                  @click="setLocale(lang.value)"
+                >
+                  {{ lang.text }}
+                </v-tab>
+              </v-tabs>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -152,7 +158,8 @@ export default {
       'locales'
     ]),
     ...mapGetters([
-      'backgroundColor'
+      'backgroundColor',
+      'localeIndex'
     ])
   },
   methods: {
@@ -169,13 +176,4 @@ export default {
   top: 0;
   right: 0;
 }
-/* .nav-overlay {
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  bottom: 0;
-  width: 100%;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.5);
-} */
 </style>

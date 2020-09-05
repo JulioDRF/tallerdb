@@ -2,6 +2,7 @@
   <v-footer
     app
     :color="backgroundColor"
+    absolute
   >
     <span
       id="copyright-msg"

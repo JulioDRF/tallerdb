@@ -16,11 +16,11 @@ export default new Vuex.Store({
     locale: 'en',
     locales: [
       {
-        text: 'English',
+        text: 'EN',
         value: 'en'
       },
       {
-        text: 'Español',
+        text: 'ES',
         value: 'es'
       }
     ]
@@ -62,11 +62,14 @@ export default new Vuex.Store({
   },
   getters: {
     project: state => projectId => {
-      return state.projects.find(p => p.projectId === projectId)
+      return state.projects.find(p => p.projectId.toLowerCase() === projectId.toLowerCase())
     },
     backgroundColor: state => {
       const theme = state.darkModeEnabled ? 'dark' : 'light';
       return Vuetify.framework.theme.themes[theme].background;
+    },
+    localeIndex: state => {
+      return state.locales.findIndex(l => l.value === state.locale)
     }
   }
 })

@@ -13,6 +13,7 @@
           <v-row
             align="center"
             justify="center"
+            no-gutters
           >
             <v-col>
               <router-view />
@@ -58,8 +59,9 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
+#vuetify-app {
+  font-family: Raleway, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

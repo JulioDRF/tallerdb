@@ -1,11 +1,12 @@
 {
-  "aboutUs": "About Us",
+  "aboutUs": "About us",
+  "backToTop": "Back to top",
   "blog": "Blog",
-  "contact": "Contact Us",
-  "darkMode": "Dark Mode",
+  "contact": "Contact us",
+  "darkMode": "Dark mode",
   "home": "Home",
   "language": "Language",
-  "pageNotFound": "Page Not Found",
+  "pageNotFound": "Page not found",
   "projects": "Projects",
   "settings": "Settings",
   "welcomeToTallerDB": "Welcome to Taller DB",
@@ -13,17 +14,20 @@
     "ampliacionCalimaya": {
       "name": "Ampliación Calimaya"
     },
-    "torreAnzures": {
-      "name": "Torre Anzures"
-    },
     "casaEspiga": {
       "name": "Casa Espiga"
+    },
+    "casaHorizonte": {
+      "name": "Casa Horizonte"
+    },
+    "chiapas138": {
+      "name": "Chiapas 138"
     },
     "plazaCalli": {
       "name": "Plaza Calli"
     },
-    "casaHorizonte": {
-      "name": "Casa Horizonte"
+    "torreAnzures": {
+      "name": "Torre Anzures"
     }
   }
 }
