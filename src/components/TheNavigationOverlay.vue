@@ -98,15 +98,7 @@
               <v-icon> {{ icons.mdiEarth }}</v-icon>
             </v-list-item-action>
             <v-list-item-content>
-              <v-tabs :value="localeIndex">
-                <v-tab
-                  v-for="lang in locales"
-                  :key="lang.value"
-                  @click="setLocale(lang.value)"
-                >
-                  {{ lang.text }}
-                </v-tab>
-              </v-tabs>
+              <LanguageSelector />
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -116,6 +108,7 @@
 </template>
 
 <script>
+import LanguageSelector from '@/components/LanguageSelector'
 import {
   mdiBookOpenVariant,
   mdiClose,
@@ -130,6 +123,9 @@ import { mapActions, mapGetters, mapState } from 'vuex'
 
 export default {
   name: 'TheNavigationOverlay',
+  components: {
+    LanguageSelector
+  },
   props: {
     toggleMenu: {
       type: Function,
@@ -153,19 +149,15 @@ export default {
   },
   computed: {
     ...mapState([
-      'darkModeEnabled',
-      'locale',
-      'locales'
+      'darkModeEnabled'
     ]),
     ...mapGetters([
-      'backgroundColor',
-      'localeIndex'
+      'backgroundColor'
     ])
   },
   methods: {
     ...mapActions([
-      'toggleDarkMode',
-      'setLocale'
+      'toggleDarkMode'
     ])
   }
 }

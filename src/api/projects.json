@@ -1,6 +1,7 @@
 [
   {
     "projectId": "ampliacionCalimaya",
+    "slug": "ampliacion-calimaya",
     "mainImage": "https://i.ibb.co/Zhgsfvp/AMPLIACION-CALIMAYA-1.jpg",
     "images": [
       "https://i.ibb.co/M1CvrWX/AMPLIACION-CALIMAYA-2.jpg",
@@ -12,6 +13,7 @@
   },
   {
     "projectId": "casaEspiga",
+    "slug": "casa-espiga",
     "mainImage": "https://i.ibb.co/1bbMwpt/CASA-ESPIGA-1.jpg",
     "images": [
       "https://i.ibb.co/f1j1fXr/CASA-ESPIGA-2.jpg",
@@ -23,6 +25,7 @@
   },
   {
     "projectId": "casaHorizonte",
+    "slug": "casa-horizonte",
     "mainImage": "https://i.ibb.co/SsyRMBG/CASA-HORIZONTE-1.jpg",
     "images": [
       "https://i.ibb.co/J7wMgZB/CASA-HORIZONTE-2.jpg"
@@ -30,6 +33,7 @@
   },
   {
     "projectId": "chiapas138",
+    "slug": "chiapas-138",
     "mainImage": "https://i.ibb.co/8YGdtsd/CHIAPAS-138-1.jpg",
     "images": [
       "https://i.ibb.co/n6bdq8P/CHIAPAS-138-2.jpg",
@@ -39,6 +43,7 @@
   },
   {
     "projectId": "plazaCalli",
+    "slug": "plaza-calli",
     "mainImage": "https://i.ibb.co/kyBYDjZ/PLAZA-CALLI-1.jpg",
     "images": [
       "https://i.ibb.co/wyDmTGK/PLAZA-CALLI-2.jpg",
@@ -47,11 +52,12 @@
   },
   {
     "projectId": "torreAnzures",
+    "slug": "torre-anzures",
     "mainImage": "https://i.ibb.co/v48ZZGt/TORRE-ANZURES-1.jpg",
     "images": [
       "https://i.ibb.co/bJ422pT/TORRE-ANZURES-2.jpg",
       "https://i.ibb.co/ByfnBgf/TORRE-ANZURES-3.jpg",
-      "https://i.ibb.co/hVbJDs2/TORRE-ANZURES-4.jpg",
+      "https://i.ibb.co/Fz2Lg68/TORRE-ANZURES-4.jpg",
       "https://i.ibb.co/qJTCYKK/TORRE-ANZURES-5.jpg"
     ]
   }

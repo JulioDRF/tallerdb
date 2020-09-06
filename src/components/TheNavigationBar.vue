@@ -17,6 +17,7 @@
           app
           flat
           absolute
+          @mouseleave="resetSelectedTab"
         >
           <v-img
             id="navbar-logo"
@@ -35,28 +36,29 @@
               class="hidden-sm-and-down"
               right
               optional
+              @change="resetSelectedTab"
             >
               <v-tab
-                key="about"
                 to="/about"
+                @mouseover="setSelectedTab('/about')"
               >
                 {{ $t('aboutUs') }}
               </v-tab>
               <v-tab
-                key="projects"
                 to="/projects"
+                @mouseover="setSelectedTab('/projects')"
               >
                 {{ $t('projects') }}
               </v-tab>
               <v-tab
-                key="contact"
                 to="/contact"
+                @mouseover="setSelectedTab('/contact')"
               >
                 {{ $t('contact') }}
               </v-tab>
               <v-tab
-                key="blog"
                 to="/blog"
+                @mouseover="setSelectedTab('/blog')"
               >
                 {{ $t('blog') }}
               </v-tab>
@@ -66,6 +68,7 @@
                 <template v-slot:activator="{ on }">
                   <v-tab
                     v-on="on"
+                    @mouseover="setSelectedTab(4)"
                   >
                     <v-icon small>
                       {{ icons.mdiCogOutline }}
@@ -96,15 +99,7 @@
                       <v-icon> {{ icons.mdiEarth }}</v-icon>
                     </v-list-item-action>
                     <v-list-item-content>
-                      <v-tabs :value="localeIndex">
-                        <v-tab
-                          v-for="lang in locales"
-                          :key="lang.value"
-                          @click="setLocale(lang.value)"
-                        >
-                          {{ lang.text }}
-                        </v-tab>
-                      </v-tabs>
+                      <LanguageSelector />
                     </v-list-item-content>
                   </v-list-item>
                 </v-list>
@@ -123,14 +118,18 @@
 </template>
 
 <script>
-import { mapActions, mapGetters, mapState } from 'vuex';
 import {
   mdiCogOutline,
   mdiEarth,
   mdiMoonWaningCrescent
 } from '@mdi/js';
+import LanguageSelector from '@/components/LanguageSelector'
+import { mapActions, mapGetters, mapState } from 'vuex';
 export default {
   name: 'TheNavigationBar',
+  components: {
+    LanguageSelector
+  },
   props: {
     toggleMenu: {
       type: Function,
@@ -144,35 +143,35 @@ export default {
         mdiCogOutline,
         mdiEarth,
         mdiMoonWaningCrescent
-      }
+      },
+      selectedTab: 0
     }
   },
   computed: {
     ...mapGetters([
-      'backgroundColor',
-      'localeIndex'
+      'backgroundColor'
     ]),
     ...mapState([
-      'darkModeEnabled',
-      'locale',
-      'locales'
+      'darkModeEnabled'
     ]),
     logoSource() {
       return this.darkModeEnabled ? require('../assets/images/taller-db-logo-inverted.svg') : require('../assets/images/taller-db-logo.svg');
-    },
-    selectedTab() {
-      return this.$route.path.split('/')[1]
     }
   },
   methods: {
     ...mapActions([
-      'toggleDarkMode',
-      'setLocale'
+      'toggleDarkMode'
     ]),
     handleClick() {
       if (this.$route.path !== '/') {
         this.$router.push('/');
       }
+    },
+    setSelectedTab(tab) {
+      this.selectedTab = tab;
+    },
+    resetSelectedTab() {
+      this.selectedTab = this.$route.path
     }
   }
 }

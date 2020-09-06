@@ -12,22 +12,22 @@
   "welcomeToTallerDB": "Welcome to Taller DB",
   "project": {
     "ampliacionCalimaya": {
-      "name": "Ampliación Calimaya"
+      "name": "Calimaya Extension"
     },
     "casaEspiga": {
-      "name": "Casa Espiga"
+      "name": "Espiga House"
     },
     "casaHorizonte": {
-      "name": "Casa Horizonte"
+      "name": "Horizonte House"
     },
     "chiapas138": {
       "name": "Chiapas 138"
     },
     "plazaCalli": {
-      "name": "Plaza Calli"
+      "name": "Calli Plaza"
     },
     "torreAnzures": {
-      "name": "Torre Anzures"
+      "name": "Anzures Tower"
     }
   }
 }

@@ -13,22 +13,23 @@
             </v-row>
             <v-row justify="space-between">
               <v-btn
-                to="/projects"
+                :to="`/project/${previousProject.slug}`"
+                class="mb-5"
               >
                 <v-icon>{{ icons.mdiArrowLeft }}</v-icon>
-                {{ $t('projects') }}
+                {{ $t('project.' + previousProject.projectId + '.name') }}
               </v-btn>
               <v-btn
-                :to="`/project/${nextProjectId}`"
+                :to="`/project/${nextProject.slug}`"
                 class="mr-5"
               >
                 <v-icon>{{ icons.mdiArrowRight }}</v-icon>
-                {{ $t('project.' + nextProjectId + '.name') }}
+                {{ $t('project.' + nextProject.projectId + '.name') }}
               </v-btn>
             </v-row>
             <v-row justify="center">
               <v-col
-                v-for="(img, idx) in project.images"
+                v-for="(img, idx) in images"
                 :key="idx"
                 class="d-flex child-flex pl-0 pr-5 mb-4"
                 cols="12"
@@ -102,14 +103,25 @@ export default {
       'projects'
     ]),
     project() {
-      return this.getProject(this.$route.params.id)
+      return this.getProject(this.$route.params.slug)
     },
-    nextProjectId() {
+    images() {
+      return [this.project.mainImage, ...this.project.images]
+    },
+    nextProject() {
       let index = this.projects.findIndex(p => this.project.projectId === p.projectId);
       if ((index || index === 0) && index + 1 < this.projects.length) {
-        return this.projects[index + 1].projectId
+        return this.projects[index + 1]
       } else {
-        return this.projects[0].projectId;
+        return this.projects[0]
+      }
+    },
+    previousProject() {
+      let index = this.projects.findIndex(p => this.project.projectId === p.projectId);
+      if (index - 1 > 0) {
+        return this.projects[index - 1]
+      } else {
+        return this.projects[this.projects.length - 1]
       }
     }
   },

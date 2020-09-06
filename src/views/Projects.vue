@@ -68,7 +68,7 @@ export default {
   },
   methods:{
     handleClick(project) {
-      this.$router.push(`/project/${project.projectId}`)
+      this.$router.push(`/project/${project.slug}`)
     }
   }
 }

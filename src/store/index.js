@@ -61,15 +61,12 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    project: state => projectId => {
-      return state.projects.find(p => p.projectId.toLowerCase() === projectId.toLowerCase())
+    project: state => slug => {
+      return state.projects.find(p => p.slug.toLowerCase() === slug.toLowerCase())
     },
     backgroundColor: state => {
       const theme = state.darkModeEnabled ? 'dark' : 'light';
       return Vuetify.framework.theme.themes[theme].background;
-    },
-    localeIndex: state => {
-      return state.locales.findIndex(l => l.value === state.locale)
     }
   }
 })
