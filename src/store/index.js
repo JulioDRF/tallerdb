@@ -12,8 +12,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     projects: api.getProjects(),
-    darkModeEnabled: false,
-    locale: 'en',
+    darkModeEnabled: null,
+    locale: null,
     locales: [
       {
         text: 'EN',
@@ -36,9 +36,15 @@ export default new Vuex.Store({
     })
   ],
   mutations: {
-    RESTORE_SAVED_STATE (state) {
+    RESTORE_SAVED_STATE (state, browserSettings) {
+      if (state.darkModeEnabled === null) {
+        state.darkModeEnabled = browserSettings.darkModeEnabled === true
+      }
       Vuetify.framework.theme.dark = state.darkModeEnabled
-      i18n.locale = state.locale;
+      if (state.locale === null) {
+        state.locale = state.locales.find(l => l === browserSettings.locale) || 'en'
+      }
+      i18n.locale = state.locale
     },
     SET_LOCALE (state, newLocale) {
       i18n.locale = newLocale
@@ -50,8 +56,8 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    restoreSavedState ({ commit }) {
-      commit(constants.RESTORE_SAVED_STATE)
+    restoreSavedState ({ commit }, browserSettings) {
+      commit(constants.RESTORE_SAVED_STATE, browserSettings)
     },
     setLocale ({ commit }, newLocale) {
       commit(constants.SET_LOCALE, newLocale)

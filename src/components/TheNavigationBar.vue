@@ -1,9 +1,6 @@
 <template>
   <div id="the-navigation-bar">
-    <v-container
-      fluid
-      fill-height
-    >
+    <v-container fluid>
       <v-row
         justify="center"
         align="center"
@@ -20,19 +17,28 @@
             absolute
             @mouseleave="resetSelectedTab"
           >
-            <v-img
-              id="navbar-logo"
-              :src="logoSource"
-              contain
-              min-height="3rem"
-              @click="handleClick"
-            />
+            <v-col
+              cols="5"
+              sm="3"
+              lg="2"
+              class="pa-0"
+            >
+              <v-img
+                id="navbar-logo"
+                :src="logoSource"
+                contain
+                width="100%"
+                max-width="10em"
+                @click="handleClick"
+              />
+            </v-col>
 
             <v-spacer />
 
             <transition name="slide">
               <v-tabs
                 v-show="showMenu"
+                id="navbar-tabs"
                 :value="selectedTab"
                 class="hidden-sm-and-down"
                 right
@@ -62,48 +68,11 @@
                 >
                   {{ $t('blog') }}
                 </v-tab>
-                <v-menu
-                  transition="scale-transition"
+                <v-tab
+                  @mouseover="setSelectedTab(4)"
                 >
-                  <template v-slot:activator="{ on }">
-                    <v-tab
-                      v-on="on"
-                      @mouseover="setSelectedTab(4)"
-                    >
-                      <v-icon small>
-                        {{ icons.mdiCogOutline }}
-                      </v-icon>
-                      {{ $t('settings') }}
-                    </v-tab>
-                  </template>
-
-                  <v-list>
-                    <v-list-item @click.stop="toggleDarkMode">
-                      <v-list-item-action>
-                        <v-switch
-                          :input-value="darkModeEnabled"
-                          :value="darkModeEnabled"
-                        />
-                      </v-list-item-action>
-                      <v-list-item-content>
-                        <v-list-item-title>
-                          <v-icon small>
-                            {{ icons.mdiMoonWaningCrescent }}
-                          </v-icon>
-                          {{ $t('darkMode') }}
-                        </v-list-item-title>
-                      </v-list-item-content>
-                    </v-list-item>
-                    <v-list-item @click.stop>
-                      <v-list-item-action>
-                        <v-icon> {{ icons.mdiEarth }}</v-icon>
-                      </v-list-item-action>
-                      <v-list-item-content>
-                        <LanguageSelector />
-                      </v-list-item-content>
-                    </v-list-item>
-                  </v-list>
-                </v-menu>
+                  <LanguageSelector />
+                </v-tab>
               </v-tabs>
             </transition>
 
@@ -184,14 +153,22 @@ export default {
 }
 </script>
 <style>
+#navbar-tabs.v-tabs .v-tab:hover::before,
+#navbar-tabs.v-tabs .v-tab--active::before {
+  opacity: 0;
+}
 .relative {
   position: relative;
 }
 #navbar-logo {
-  max-width: 10rem;
   margin-top: -1rem;
   padding: 0;
   cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  #navbar-logo {
+    margin-top: 0rem;
+  }
 }
 .slide-enter-active, .slide-leave-active {
   transition: all 0.5s;

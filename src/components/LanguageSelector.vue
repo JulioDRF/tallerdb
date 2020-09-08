@@ -1,20 +1,27 @@
 <template>
-  <div
-    class="language-selector"
-    @mouseleave="resetSelectedTab"
-  >
-    <v-tabs
-      :value="selectedTab"
+  <div class="language-selector">
+    <v-btn-toggle
+      :value="locale"
+      group
+      active-class="lang-button-active"
     >
-      <v-tab
-        v-for="(lang, index) in locales"
+      <div
+        v-for="lang in locales"
         :key="lang.value"
-        @mouseover="setSelectedTab(index)"
-        @click="setLocale(lang.value)"
       >
-        {{ lang.text }}
-      </v-tab>
-    </v-tabs>
+        <v-btn
+          :value="lang.value"
+          class="pa-0"
+          text
+          @click="setLocale(lang.value)"
+        >
+          {{ lang.text }}
+        </v-btn>
+        <span
+          v-if="locales.findIndex(l => l.value === lang.value) !== locales.length -1"
+        >|</span>
+      </div>
+    </v-btn-toggle>
   </div>
 </template>
 
@@ -55,4 +62,11 @@ export default {
 
 <style>
 
-</style>template
+.language-selector .v-btn.lang-button-active {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.language-selector .v-btn.lang-button-active::before {
+  opacity: 0;
+}
+</style>

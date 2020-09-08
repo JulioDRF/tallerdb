@@ -1,19 +1,20 @@
 {
   "aboutUs": "Acerca de nosotros",
-  "backToTop": "Volver arriba",
+  "architect": "Arquitecto",
+  "backToProjects": "Volver a proyectos",
   "blog": "Blog",
   "contact": "Contacto",
   "darkMode": "Modo oscuro",
+  "development": "Desarrollo",
   "home": "Inicio",
   "language": "Lenguaje",
+  "next": "siguiente",
   "pageNotFound": "Página no encontrada",
+  "previous": "anterior",
   "projects": "Proyectos",
   "settings": "Ajustes",
   "welcomeToTallerDB": "Bienvenido a Taller DB",
   "project": {
-    "ampliacionCalimaya": {
-      "name": "Ampliación Calimaya"
-    },
     "casaEspiga": {
       "name": "Casa Espiga"
     },
@@ -22,6 +23,9 @@
     },
     "chiapas138": {
       "name": "Chiapas 138"
+    },
+    "oficinaCalimaya": {
+      "name": "Oficina Calimaya"
     },
     "plazaCalli": {
       "name": "Plaza Calli"

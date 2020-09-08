@@ -1,7 +1,52 @@
 [
   {
-    "projectId": "ampliacionCalimaya",
-    "slug": "ampliacion-calimaya",
+    "projectId": "casaEspiga",
+    "slug": "casa-espiga",
+    "location": "Santiago de Querétaro, Querétaro, México",
+    "architect": "Gerardo Batres, Hector Batres, Eric Delitzsch",
+    "development": "Taller DB",
+    "year": "2019",
+    "mainImage": "https://i.ibb.co/1bbMwpt/CASA-ESPIGA-1.jpg",
+    "images": [
+      "https://i.ibb.co/f1j1fXr/CASA-ESPIGA-2.jpg",
+      "https://i.ibb.co/Sx3mNv7/CASA-ESPIGA-3.jpg",
+      "https://i.ibb.co/MkqLjJq/CASA-ESPIGA-4.jpg",
+      "https://i.ibb.co/z2d1Tv1/CASA-ESPIGA-5.jpg"
+    ]
+  },
+  {
+    "projectId": "casaHorizonte",
+    "slug": "casa-horizonte",
+    "location": "Ciudad de México, Estado de México, México",
+    "architect": "Gerardo Batres",
+    "development": "Taller DB",
+    "year": "2018",
+    "mainImage": "https://i.ibb.co/SsyRMBG/CASA-HORIZONTE-1.jpg",
+    "images": [
+      "https://i.ibb.co/J7wMgZB/CASA-HORIZONTE-2.jpg"
+    ]
+  },
+  {
+    "projectId": "chiapas138",
+    "slug": "chiapas-138",
+    "location": "Roma Norte, Ciudad de México, México",
+    "architect": "Eric Delitzsch",
+    "development": "Taller DB",
+    "year": "2019",
+    "mainImage": "https://i.ibb.co/8YGdtsd/CHIAPAS-138-1.jpg",
+    "images": [
+      "https://i.ibb.co/n6bdq8P/CHIAPAS-138-2.jpg",
+      "https://i.ibb.co/KwfGLXx/CHIAPAS-138-3.jpg",
+      "https://i.ibb.co/wchDXPf/CHIAPAS-138-4.jpg"
+    ]
+  },
+  {
+    "projectId": "oficinaCalimaya",
+    "slug": "oficina-calimaya",
+    "location": "Toluca, Estado de México, México",
+    "architect": "Gerardo Batres",
+    "development": "Taller DB",
+    "year": "2020",
     "mainImage": "https://i.ibb.co/Zhgsfvp/AMPLIACION-CALIMAYA-1.jpg",
     "images": [
       "https://i.ibb.co/M1CvrWX/AMPLIACION-CALIMAYA-2.jpg",
@@ -12,38 +57,12 @@
     ]
   },
   {
-    "projectId": "casaEspiga",
-    "slug": "casa-espiga",
-    "mainImage": "https://i.ibb.co/1bbMwpt/CASA-ESPIGA-1.jpg",
-    "images": [
-      "https://i.ibb.co/f1j1fXr/CASA-ESPIGA-2.jpg",
-      "https://i.ibb.co/Sx3mNv7/CASA-ESPIGA-3.jpg",
-      "https://i.ibb.co/MkqLjJq/CASA-ESPIGA-4.jpg",
-      "https://i.ibb.co/z2d1Tv1/CASA-ESPIGA-5.jpg",
-      "https://i.ibb.co/LxRL1Fz/CASA-ESPIGA-MAQUETA.jpg"
-    ]
-  },
-  {
-    "projectId": "casaHorizonte",
-    "slug": "casa-horizonte",
-    "mainImage": "https://i.ibb.co/SsyRMBG/CASA-HORIZONTE-1.jpg",
-    "images": [
-      "https://i.ibb.co/J7wMgZB/CASA-HORIZONTE-2.jpg"
-    ]
-  },
-  {
-    "projectId": "chiapas138",
-    "slug": "chiapas-138",
-    "mainImage": "https://i.ibb.co/8YGdtsd/CHIAPAS-138-1.jpg",
-    "images": [
-      "https://i.ibb.co/n6bdq8P/CHIAPAS-138-2.jpg",
-      "https://i.ibb.co/KwfGLXx/CHIAPAS-138-3.jpg",
-      "https://i.ibb.co/wchDXPf/CHIAPAS-138-4.jpg"
-    ]
-  },
-  {
     "projectId": "plazaCalli",
     "slug": "plaza-calli",
+    "location": "Ciudad de México, Estado de México, México",
+    "architect": "Hector Batres",
+    "development": "Taller DB",
+    "year": "2018",
     "mainImage": "https://i.ibb.co/kyBYDjZ/PLAZA-CALLI-1.jpg",
     "images": [
       "https://i.ibb.co/wyDmTGK/PLAZA-CALLI-2.jpg",
@@ -53,6 +72,10 @@
   {
     "projectId": "torreAnzures",
     "slug": "torre-anzures",
+    "location": "Anzures, Ciudad de México, México",
+    "architect": "Gerardo Batres",
+    "development": "Taller DB",
+    "year": "2020",
     "mainImage": "https://i.ibb.co/v48ZZGt/TORRE-ANZURES-1.jpg",
     "images": [
       "https://i.ibb.co/bJ422pT/TORRE-ANZURES-2.jpg",

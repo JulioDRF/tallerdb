@@ -8,9 +8,10 @@
               <v-col
                 v-for="p in projects"
                 :key="p.projectId"
-                class="d-flex child-flex pl-0 pr-5"
+                class="d-flex child-flex pa-2"
+                cols="12"
+                sm="6"
                 md="4"
-                cols="6"
               >
                 <v-hover v-slot:default="{ hover }">
                   <v-card
@@ -22,11 +23,10 @@
                     <v-img
                       :src="p.mainImage"
                       aspect-ratio="1"
-                      class="grey lighten-2"
                     >
                       <template v-slot:placeholder>
                         <v-row
-                          class="fill-height ma-0 grey darken-1"
+                          class="fill-height ma-0 grey"
                           align="center"
                           justify="center"
                         >
@@ -41,7 +41,6 @@
                       <div
                         v-if="hover"
                         class="d-flex transition-fast-in-fast-out info-overlay white--text"
-                        style="height: 100%;"
                       >
                         <span>{{ $t('project.' + p.projectId + '.name') }}</span>
                       </div>
@@ -80,6 +79,7 @@ export default {
   justify-content: center;
   bottom: 0;
   width: 100%;
+  height: 100%;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.5);
 }

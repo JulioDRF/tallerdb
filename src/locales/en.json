@@ -1,19 +1,19 @@
 {
   "aboutUs": "About us",
-  "backToTop": "Back to top",
+  "architect": "Architect",
+  "backToProjects": "Back to projects",
   "blog": "Blog",
   "contact": "Contact us",
   "darkMode": "Dark mode",
+  "development": "Development",
   "home": "Home",
   "language": "Language",
+  "next": "next",
   "pageNotFound": "Page not found",
+  "previous": "previous",
   "projects": "Projects",
   "settings": "Settings",
-  "welcomeToTallerDB": "Welcome to Taller DB",
   "project": {
-    "ampliacionCalimaya": {
-      "name": "Calimaya Extension"
-    },
     "casaEspiga": {
       "name": "Espiga House"
     },
@@ -22,6 +22,9 @@
     },
     "chiapas138": {
       "name": "Chiapas 138"
+    },
+    "oficinaCalimaya": {
+      "name": "Calimaya Office"
     },
     "plazaCalli": {
       "name": "Calli Plaza"

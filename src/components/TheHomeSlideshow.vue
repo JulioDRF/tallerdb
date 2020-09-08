@@ -1,6 +1,9 @@
 <template>
   <div class="the-home-slideshow">
-    <v-container fluid>
+    <v-container
+      class="fill-height"
+      fluid
+    >
       <v-row
         justify="center"
         align="start"
@@ -28,7 +31,6 @@
                   <div
                     v-if="hover"
                     class="d-flex transition-fast-in-fast-out info-overlay white--text"
-                    style="height: 100%;"
                   >
                     <span>{{ $t('project.' + currentProject.projectId + '.name') }}</span>
                   </div>
@@ -104,6 +106,7 @@ export default {
   justify-content: start;
   bottom: 0;
   width: 100%;
+  height: 100%;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.5);
 }

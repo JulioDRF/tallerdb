@@ -13,7 +13,6 @@
           <v-row
             align="center"
             justify="center"
-            no-gutters
           >
             <v-col>
               <router-view />
@@ -48,7 +47,10 @@ export default {
     }
   },
   created() {
-    this.restoreSavedState();
+    this.restoreSavedState({
+      locale: navigator && navigator.language && navigator.language.split('-')[0],
+      darkModeEnabled: window && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    });
   },
   methods: {
     ...mapActions([
@@ -58,10 +60,11 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700&display=swap');
 #vuetify-app {
-  font-family: Raleway, Helvetica, Arial, sans-serif;
+  font-family: Mulish, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
