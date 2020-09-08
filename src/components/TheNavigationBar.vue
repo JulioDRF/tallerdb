@@ -21,7 +21,7 @@
               cols="5"
               sm="3"
               lg="2"
-              class="pa-0"
+              class="pa-0 fill-height"
             >
               <v-img
                 id="navbar-logo"
@@ -40,6 +40,8 @@
                 v-show="showMenu"
                 id="navbar-tabs"
                 :value="selectedTab"
+                :slider-color="activeTabsColor"
+                :color="activeTabsColor"
                 class="hidden-sm-and-down"
                 right
                 optional
@@ -119,6 +121,7 @@ export default {
   },
   computed: {
     ...mapGetters([
+      'activeTabsColor',
       'backgroundColor'
     ]),
     ...mapState([
@@ -161,7 +164,6 @@ export default {
   position: relative;
 }
 #navbar-logo {
-  margin-top: -1rem;
   padding: 0;
   cursor: pointer;
 }

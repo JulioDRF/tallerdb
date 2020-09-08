@@ -42,7 +42,7 @@ export default new Vuex.Store({
       }
       Vuetify.framework.theme.dark = state.darkModeEnabled
       if (state.locale === null) {
-        state.locale = state.locales.find(l => l === browserSettings.locale) || 'en'
+        state.locale = state.locales.find(l => l.value === browserSettings.locale) || 'en'
       }
       i18n.locale = state.locale
     },
@@ -73,6 +73,10 @@ export default new Vuex.Store({
     backgroundColor: state => {
       const theme = state.darkModeEnabled ? 'dark' : 'light';
       return Vuetify.framework.theme.themes[theme].background;
+    },
+    activeTabsColor: state => {
+      const theme = state.darkModeEnabled ? 'dark' : 'light';
+      return Vuetify.framework.theme.themes[theme].activeTabs;
     }
   }
 })

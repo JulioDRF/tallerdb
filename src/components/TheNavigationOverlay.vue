@@ -35,9 +35,6 @@
                   to="/"
                   @click.capture="toggleMenu"
                 >
-                  <v-list-item-action>
-                    <v-icon>{{ icons.mdiHome }}</v-icon>
-                  </v-list-item-action>
                   <v-list-item-content>
                     <v-list-item-title>{{ $t('home') }}</v-list-item-title>
                   </v-list-item-content>
@@ -46,9 +43,6 @@
                   to="/about"
                   @click.capture="toggleMenu"
                 >
-                  <v-list-item-action>
-                    <v-icon>{{ icons.mdiInformation }}</v-icon>
-                  </v-list-item-action>
                   <v-list-item-content>
                     <v-list-item-title>{{ $t('aboutUs') }}</v-list-item-title>
                   </v-list-item-content>
@@ -57,9 +51,6 @@
                   to="/projects"
                   @click.capture="toggleMenu"
                 >
-                  <v-list-item-action>
-                    <v-icon>{{ icons.mdiPencilRuler }}</v-icon>
-                  </v-list-item-action>
                   <v-list-item-content>
                     <v-list-item-title>{{ $t('projects') }}</v-list-item-title>
                   </v-list-item-content>
@@ -68,9 +59,6 @@
                   to="/contact"
                   @click.capture="toggleMenu"
                 >
-                  <v-list-item-action>
-                    <v-icon>{{ icons.mdiMessageOutline }}</v-icon>
-                  </v-list-item-action>
                   <v-list-item-content>
                     <v-list-item-title>{{ $t('contact') }}</v-list-item-title>
                   </v-list-item-content>
@@ -79,33 +67,27 @@
                   to="/blog"
                   @click.capture="toggleMenu"
                 >
-                  <v-list-item-action>
-                    <v-icon>{{ icons.mdiBookOpenVariant }}</v-icon>
-                  </v-list-item-action>
                   <v-list-item-content>
                     <v-list-item-title>{{ $t('blog') }}</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
                 <v-list-item @click="toggleDarkMode">
-                  <v-list-item-action>
-                    <v-switch
-                      :input-value="darkModeEnabled"
-                      :value="darkModeEnabled"
-                    />
-                  </v-list-item-action>
                   <v-list-item-content>
                     <v-list-item-title>
-                      <v-icon small>
-                        {{ icons.mdiMoonWaningCrescent }}
-                      </v-icon>
-                      {{ $t('darkMode') }}
+                      <v-row
+                        justify="center"
+                        align="center"
+                      >
+                        <v-switch
+                          :input-value="darkModeEnabled"
+                          :value="darkModeEnabled"
+                        />
+                        {{ $t('darkMode') }}
+                      </v-row>
                     </v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
                 <v-list-item>
-                  <v-list-item-action>
-                    <v-icon> {{ icons.mdiEarth }}</v-icon>
-                  </v-list-item-action>
                   <v-list-item-content>
                     <LanguageSelector />
                   </v-list-item-content>

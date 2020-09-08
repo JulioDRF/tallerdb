@@ -14,10 +14,12 @@ export default new Vuetify({
         primary: colors.blueGrey.darken1,
         secondary: colors.blueGrey.lighten3,
         accent: colors.orange.base,
-        background: colors.shades.white
+        background: colors.shades.white,
+        activeTabs: 'grey'
       },
       dark: {
-        background: colors.blueGrey.darken4
+        background: colors.shades.black,
+        activeTabs: 'white'
       }
     },
   },
