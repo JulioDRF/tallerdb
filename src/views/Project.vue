@@ -20,61 +20,23 @@
             </v-row>
             <v-row justify="center">
               <v-col class="d-flex child-flex">
-                <v-card
-                  flat
-                  tile
-                >
-                  <v-img
-                    :src="project.mainImage"
-                    max-height="90vh"
-                  >
-                    <template v-slot:placeholder>
-                      <v-row
-                        class="fill-height ma-0 grey"
-                        align="center"
-                        justify="center"
-                      >
-                        <v-progress-circular
-                          indeterminate
-                          color="grey lighten-5"
-                        />
-                      </v-row>
-                    </template>
-                  </v-img>
-                </v-card>
+                <ProjectImage
+                  :key="project.projectId"
+                  :image-src="project.mainImage"
+                />
               </v-col>
             </v-row>
             <v-row justify="center">
               <v-col
                 v-for="(img, idx) in project.images"
-                :key="idx"
+                :key="project.projectId + idx"
                 class="d-flex child-flex"
                 cols="12"
                 md="6"
               >
-                <v-card
-                  flat
-                  tile
-                  class="d-flex"
-                >
-                  <v-img
-                    :src="img"
-                    max-height="90vh"
-                  >
-                    <template v-slot:placeholder>
-                      <v-row
-                        class="fill-height ma-0 grey"
-                        align="center"
-                        justify="center"
-                      >
-                        <v-progress-circular
-                          indeterminate
-                          color="grey lighten-5"
-                        />
-                      </v-row>
-                    </template>
-                  </v-img>
-                </v-card>
+                <ProjectImage
+                  :image-src="img"
+                />
               </v-col>
             </v-row>
             <v-row justify="space-between">
@@ -111,9 +73,13 @@
 </template>
 
 <script>
+import ProjectImage from '@/components/ProjectImage';
 import { mapGetters, mapState } from 'vuex';
 export default {
   name: 'Project',
+  components: {
+    ProjectImage
+  },
   computed: {
     ...mapGetters({
       getProject: 'project'

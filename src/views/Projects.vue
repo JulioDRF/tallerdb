@@ -18,6 +18,7 @@
                     flat
                     tile
                     class="d-flex"
+                    :color="backgroundColor"
                     @click="handleClick(p)"
                   >
                     <v-img
@@ -26,13 +27,13 @@
                     >
                       <template v-slot:placeholder>
                         <v-row
-                          class="fill-height ma-0 grey"
+                          class="fill-height ma-0"
                           align="center"
                           justify="center"
                         >
                           <v-progress-circular
                             indeterminate
-                            color="grey lighten-5"
+                            :color="spinnerColor"
                           />
                         </v-row>
                       </template>
@@ -57,15 +58,19 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapGetters, mapState } from 'vuex';
 export default {
   name: 'Projects',
   computed: {
     ...mapState([
       'projects'
+    ]),
+    ...mapGetters([
+      'spinnerColor',
+      'backgroundColor'
     ])
   },
-  methods:{
+  methods: {
     handleClick(project) {
       this.$router.push(`/project/${project.slug}`)
     }

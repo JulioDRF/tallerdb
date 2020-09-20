@@ -77,6 +77,10 @@ export default new Vuex.Store({
     activeTabsColor: state => {
       const theme = state.darkModeEnabled ? 'dark' : 'light';
       return Vuetify.framework.theme.themes[theme].activeTabs;
+    },
+    spinnerColor: state => {
+      const theme = state.darkModeEnabled ? 'dark' : 'light';
+      return Vuetify.framework.theme.themes[theme].spinner;
     }
   }
 })

@@ -15,11 +15,13 @@ export default new Vuetify({
         secondary: colors.blueGrey.lighten3,
         accent: colors.orange.base,
         background: colors.shades.white,
-        activeTabs: colors.grey.base
+        activeTabs: colors.grey.base,
+        spinner: colors.grey.base
       },
       dark: {
         background: colors.shades.black,
-        activeTabs: colors.shades.white
+        activeTabs: colors.shades.white,
+        spinner: colors.shades.white
       }
     },
   },
