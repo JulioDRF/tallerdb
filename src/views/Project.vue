@@ -112,22 +112,8 @@
 
 <script>
 import { mapGetters, mapState } from 'vuex';
-import {
-  mdiArrowLeft,
-  mdiArrowRight,
-  mdiArrowUp
-} from '@mdi/js';
 export default {
   name: 'Project',
-  data () {
-    return {
-      icons: {
-        mdiArrowLeft,
-        mdiArrowRight,
-        mdiArrowUp
-      }
-    }
-  },
   computed: {
     ...mapGetters({
       getProject: 'project'

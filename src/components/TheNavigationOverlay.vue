@@ -17,7 +17,7 @@
             large
             @click="toggleMenu"
           >
-            <v-icon>{{ icons.mdiClose }}</v-icon>
+            <v-icon>{{ mdiClose }}</v-icon>
           </v-btn>
           <v-row
             justify="center"
@@ -103,16 +103,7 @@
 
 <script>
 import LanguageSelector from '@/components/LanguageSelector'
-import {
-  mdiBookOpenVariant,
-  mdiClose,
-  mdiEarth,
-  mdiInformation,
-  mdiHome,
-  mdiMessageOutline,
-  mdiMoonWaningCrescent,
-  mdiPencilRuler,
-} from '@mdi/js';
+import { mdiClose } from '@mdi/js';
 import { mapActions, mapGetters, mapState } from 'vuex'
 
 export default {
@@ -129,16 +120,7 @@ export default {
   },
   data() {
     return {
-      icons: {
-        mdiBookOpenVariant,
-        mdiClose,
-        mdiEarth,
-        mdiInformation,
-        mdiHome,
-        mdiMessageOutline,
-        mdiMoonWaningCrescent,
-        mdiPencilRuler,
-      }
+      mdiClose
     }
   },
   computed: {
@@ -156,7 +138,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 #close-button {
   position: fixed;
   top: 0;
