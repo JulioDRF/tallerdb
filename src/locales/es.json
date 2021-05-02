@@ -4,34 +4,37 @@
   "backToProjects": "Volver a proyectos",
   "blog": "Blog",
   "contact": "Contacto",
+  "construction": "Construcción",
   "darkMode": "Modo oscuro",
-  "development": "Desarrollo",
   "home": "Inicio",
   "language": "Lenguaje",
   "next": "siguiente",
   "pageNotFound": "Página no encontrada",
   "previous": "anterior",
   "projects": "Proyectos",
+  "typology": "Tipología",
   "settings": "Ajustes",
   "welcomeToTallerDB": "Bienvenido a Taller DB",
   "project": {
+    "caballerizasBacosa": {
+      "name": "Caballerizas Bacosa",
+      "typology": "Casa de campo"
+    },
+    "casaDeCampo": {
+      "name": "Casa de Campo",
+      "typology": "Vivienda multifamiliar"
+    },
     "casaEspiga": {
-      "name": "Casa Espiga"
-    },
-    "casaHorizonte": {
-      "name": "Casa Horizonte"
-    },
-    "chiapas138": {
-      "name": "Chiapas 138"
+      "name": "Casa Espiga",
+      "typology": "Vivienda unifamiliar"
     },
     "oficinaCalimaya": {
-      "name": "Oficina Calimaya"
+      "name": "Oficina Calimaya",
+      "typology": "Oficina"
     },
-    "plazaCalli": {
-      "name": "Plaza Calli"
-    },
-    "torreAnzures": {
-      "name": "Torre Anzures"
+    "onega188": {
+      "name": "Onega 188",
+      "typology": "Residencial"
     }
   }
 }

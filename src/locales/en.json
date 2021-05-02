@@ -4,8 +4,8 @@
   "backToProjects": "Back to projects",
   "blog": "Blog",
   "contact": "Contact us",
+  "construction": "Construction",
   "darkMode": "Dark mode",
-  "development": "Development",
   "home": "Home",
   "language": "Language",
   "next": "next",
@@ -13,24 +13,27 @@
   "previous": "previous",
   "projects": "Projects",
   "settings": "Settings",
+  "typology": "Typology",
   "project": {
+    "caballerizasBacosa": {
+      "name": "Bacosa Stables",
+      "typology": "Summer house"
+    },
+    "casaDeCampo": {
+      "name": "Summer House",
+      "typology": "Multi-family home"
+    },
     "casaEspiga": {
-      "name": "Espiga House"
-    },
-    "casaHorizonte": {
-      "name": "Horizonte House"
-    },
-    "chiapas138": {
-      "name": "Chiapas 138"
+      "name": "Espiga House",
+      "typology": "Single-family home"
     },
     "oficinaCalimaya": {
-      "name": "Calimaya Office"
+      "name": "Calimaya Office",
+      "typology": "Office"
     },
-    "plazaCalli": {
-      "name": "Calli Plaza"
-    },
-    "torreAnzures": {
-      "name": "Anzures Tower"
+    "onega188": {
+      "name": "Onega 188",
+      "typology": "Residential"
     }
   }
 }

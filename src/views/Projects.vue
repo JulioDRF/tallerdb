@@ -2,7 +2,7 @@
   <div class="projects">
     <v-container fluid>
       <v-row justify="center">
-        <v-col md="9">
+        <v-col md="12">
           <v-container fluid>
             <v-row>
               <v-col
@@ -58,17 +58,15 @@
 </template>
 
 <script>
-import { mapGetters, mapState } from 'vuex';
+import { mapGetters } from 'vuex';
 export default {
   name: 'Projects',
   computed: {
-    ...mapState([
-      'projects'
-    ]),
-    ...mapGetters([
-      'spinnerColor',
-      'backgroundColor'
-    ])
+    ...mapGetters({
+      'spinnerColor' : 'spinnerColor',
+      'backgroundColor' : 'backgroundColor',
+      projects: "sortedProjects",
+    })
   },
   methods: {
     handleClick(project) {

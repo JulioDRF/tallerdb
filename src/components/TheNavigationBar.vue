@@ -7,7 +7,7 @@
         no-gutters
       >
         <v-col
-          md="9"
+          md="12"
           class="relative"
         >
           <v-app-bar

@@ -70,6 +70,9 @@ export default new Vuex.Store({
     project: state => slug => {
       return state.projects.find(p => p.slug.toLowerCase() === slug.toLowerCase())
     },
+    sortedProjects: state => {
+      return state.projects.slice().sort((a, b) => a.order - b.order);
+    },
     backgroundColor: state => {
       const theme = state.darkModeEnabled ? 'dark' : 'light';
       return Vuetify.framework.theme.themes[theme].background;

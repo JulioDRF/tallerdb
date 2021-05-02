@@ -2,19 +2,23 @@
   <div class="project">
     <v-container fluid>
       <v-row justify="center">
-        <v-col md="9">
+        <v-col md="12">
           <v-container fluid>
             <v-row>
               <v-col>
                 <div class="project-description">
-                  <p>
-                    <span class="project-title">
-                      {{ $t('project.' + project.projectId + '.name') }}
-                    </span>
-                    <span> | {{ project.location }}</span>
+                  <p class="project-title">
+                    {{ $t("project." + project.projectId + ".name") }}
                   </p>
-                  <p>{{ $t('architect') }}: {{ project.architect }}</p>
-                  <p>{{ $t('development') }}: {{ project.development }}</p>
+                  <p>{{ project.location }}</p>
+                  <p>{{ $t("architect") }}: {{ project.architect }}</p>
+                  <p>{{ $t("typology") }}: {{ $t("project." + project.projectId + ".typology") }}</p>
+                  <p>
+                    {{ $t("construction") }}: {{ project.construction }}
+                    <span
+                      v-if="project.constructionInM2"
+                    >m<sup>2</sup></span>
+                  </p>
                 </div>
               </v-col>
             </v-row>
@@ -34,9 +38,7 @@
                 cols="12"
                 md="6"
               >
-                <ProjectImage
-                  :image-src="img"
-                />
+                <ProjectImage :image-src="img" />
               </v-col>
             </v-row>
             <v-row justify="space-between">
@@ -45,7 +47,7 @@
                 text
                 small
               >
-                {{ $t('backToProjects') }}
+                {{ $t("backToProjects") }}
               </v-btn>
               <div>
                 <v-btn
@@ -53,7 +55,7 @@
                   text
                   small
                 >
-                  {{ $t('previous') }}
+                  {{ $t("previous") }}
                 </v-btn>
                 /
                 <v-btn
@@ -61,7 +63,7 @@
                   text
                   small
                 >
-                  {{ $t('next') }}
+                  {{ $t("next") }}
                 </v-btn>
               </div>
             </v-row>
@@ -73,55 +75,63 @@
 </template>
 
 <script>
-import ProjectImage from '@/components/ProjectImage';
-import { mapGetters, mapState } from 'vuex';
+import ProjectImage from "@/components/ProjectImage";
+import { mapGetters } from "vuex";
 export default {
-  name: 'Project',
+  name: "Project",
   components: {
-    ProjectImage
+    ProjectImage,
   },
   computed: {
     ...mapGetters({
-      getProject: 'project'
+      getProject: "project",
+      projects: "sortedProjects",
     }),
-    ...mapState([
-      'projects'
-    ]),
     project() {
-      return this.getProject(this.$route.params.slug)
+      return this.getProject(this.$route.params.slug);
+    },
+    projectIndex() {
+      return this.projects.findIndex(
+        (p) => this.project.projectId === p.projectId
+      );
     },
     nextProject() {
-      let index = this.projects.findIndex(p => this.project.projectId === p.projectId);
-      if ((index || index === 0) && index + 1 < this.projects.length) {
-        return this.projects[index + 1]
+      if (this.projectIndex !== -1 && this.projectIndex + 1 < this.projects.length) {
+        return this.projects[this.projectIndex + 1];
       } else {
-        return this.projects[0]
+        return this.projects[0];
       }
     },
     previousProject() {
-      let index = this.projects.findIndex(p => this.project.projectId === p.projectId);
-      if (index - 1 > 0) {
-        return this.projects[index - 1]
+      if (this.projectIndex - 1 >= 0) {
+        return this.projects[this.projectIndex - 1];
       } else {
-        return this.projects[this.projects.length - 1]
+        return this.projects[this.projects.length - 1];
       }
+    },
+  },
+  mounted() {
+    if (!this.project) {
+      this.$router.push({ name: "NotFound" });
     }
   }
-}
+};
 </script>
 
 <style scoped>
 .project-description {
-  font-family: Lato, Raleway;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 1rem;
   text-align: start;
 }
-.project-description > p{
+.project-description > p {
   margin: 0.25em;
 }
-.project-title {
+.project-description > p.project-title {
   font-weight: 700;
   text-transform: uppercase;
+  border-bottom: 1px gray solid;
+  letter-spacing: 0.3em;
+  margin-bottom: 1em;
 }
 </style>

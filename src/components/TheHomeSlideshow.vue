@@ -10,7 +10,7 @@
         no-gutters
       >
         <v-col
-          md="9"
+          md="8"
           class="relative"
         >
           <v-hover v-slot:default="{ hover }">
