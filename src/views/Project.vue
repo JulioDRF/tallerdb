@@ -112,7 +112,7 @@ export default {
 
 <style scoped>
 .project-description {
-  font-family: Raleway;
+  font-family: Lato, Raleway;
   font-weight: 200;
   font-size: 1rem;
   text-align: start;
