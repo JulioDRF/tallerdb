@@ -36,7 +36,7 @@
                 :key="project.projectId + idx"
                 class="d-flex child-flex"
                 cols="12"
-                md="6"
+                :md="getImageColumnSize(idx)"
               >
                 <ProjectImage :image-src="img" />
               </v-col>
@@ -114,7 +114,23 @@ export default {
     if (!this.project) {
       this.$router.push({ name: "NotFound" });
     }
-  }
+  },
+  methods: {
+    // If there's an odd number of images and this is the last image, give the image 100% width (12)
+    // Otherwise give the image 50% width (6)
+    getImageColumnSize(index) {
+      if (
+        this.project &&
+        this.project.images &&
+        this.project.images.length > 0 &&
+        this.project.images.length % 2 === 1 &&
+        index === this.project.images.length - 1
+      ) {
+        return "12";
+      }
+      return "6";
+    }
+  },
 };
 </script>
 
