@@ -63,14 +63,6 @@
                     <v-list-item-title>{{ $t('contact') }}</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
-                <v-list-item
-                  to="/blog"
-                  @click.capture="toggleMenu"
-                >
-                  <v-list-item-content>
-                    <v-list-item-title>{{ $t('blog') }}</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
                 <v-list-item @click="toggleDarkMode">
                   <v-list-item-content>
                     <v-list-item-title>

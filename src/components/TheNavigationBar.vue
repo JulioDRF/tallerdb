@@ -65,12 +65,6 @@
                   {{ $t('contact') }}
                 </v-tab>
                 <v-tab
-                  to="/blog"
-                  @mouseover="setSelectedTab('/blog')"
-                >
-                  {{ $t('blog') }}
-                </v-tab>
-                <v-tab
                   @mouseover="setSelectedTab(4)"
                 >
                   <LanguageSelector />
