@@ -7,7 +7,8 @@
       class="d-flex fill-height"
     >
       <v-img
-        :src="imageSrc"
+        :lazy-src="imageSrc.srcHD ? imageSrc.src : null"
+        :src="imageSrc.srcHD || imageSrc.src"
         max-height="90vh"
       >
         <template v-slot:placeholder>
@@ -33,7 +34,7 @@ export default {
   name: 'ProjectImage',
   props: {
     imageSrc: {
-      type: String,
+      type: Object,
       required: true
     }
   },

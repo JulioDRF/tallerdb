@@ -21,7 +21,7 @@
         </v-col>
         <v-col md="6">
           <ProjectImage
-            image-src="https://www.dropbox.com/sh/4mmfi9c766j06ye/AADc2MbeH0WJBZa3f1ZtI_WGa/ESPIGA%201.PNG?raw=1"
+            :image-src="{ src: aboutUsImage }"
           />
         </v-col>
       </v-row>
@@ -31,11 +31,15 @@
 
 <script>
 import ProjectImage from "@/components/ProjectImage";
+import { mapGetters } from 'vuex';
 export default {
   name: "About",
   components: {
     ProjectImage,
   },
+  computed: {
+    ...mapGetters(["aboutUsImage"]),
+  }
 };
 </script>
 

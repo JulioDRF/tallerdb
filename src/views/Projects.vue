@@ -22,7 +22,7 @@
                     @click="handleClick(p)"
                   >
                     <v-img
-                      :src="p.mainImage"
+                      :src="p.mainImage.src"
                       aspect-ratio="1"
                     >
                       <template v-slot:placeholder>

@@ -12,6 +12,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     projects: api.getProjects(),
+    misc: api.getMisc(),
     darkModeEnabled: null,
     locale: null,
     locales: [
@@ -67,6 +68,7 @@ export default new Vuex.Store({
     }
   },
   getters: {
+    aboutUsImage: state => state.misc.aboutUsImage,
     project: state => slug => {
       return state.projects.find(p => p.slug.toLowerCase() === slug.toLowerCase())
     },

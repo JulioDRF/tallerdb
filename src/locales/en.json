@@ -28,6 +28,10 @@
       "name": "Espiga House",
       "typology": "Single-family home"
     },
+    "casaValle": {
+      "name": "Valle House",
+      "typology": "Summer house"
+    },
     "oficinaCalimaya": {
       "name": "Calimaya Office",
       "typology": "Office"

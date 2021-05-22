@@ -24,7 +24,7 @@
                 min-width="1vw"
                 width="100%"
                 class="home-img"
-                :src="currentProject.mainImage"
+                :src="currentProject.mainImage.src"
                 @click="handleClick"
               >
                 <v-fade-transition>

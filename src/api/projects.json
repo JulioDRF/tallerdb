@@ -7,11 +7,23 @@
     "construction": "172.9",
     "constructionInM2": true,
     "order": 4,
-    "mainImage": "https://www.dropbox.com/sh/4mmfi9c766j06ye/AAAsmaHXoEYcgfgtO3kc0QgJa/CABALLERIZAS%202.PNG?raw=1",
+    "mainImage": {
+      "src": "https://www.dropbox.com/s/vfmb6nljh8jfueg/CABALLERIZAS%201.PNG?raw=1",
+      "srcHD": "https://www.dropbox.com/s/iw597xz0gw8c3m9/CABALLERIZAS%201%20HD.jpg?raw=1"
+    },
     "images": [
-      "https://www.dropbox.com/sh/4mmfi9c766j06ye/AADgodGKbjmDIVTSNp9bTvTra/CABALLERIZAS%201.PNG?raw=1",
-      "https://www.dropbox.com/sh/4mmfi9c766j06ye/AAB5LUddUMytfl_iq-rmDCk9a/CABALLERIZAS%203.PNG?raw=1",
-      "https://www.dropbox.com/sh/4mmfi9c766j06ye/AAAHb1XKoXUAzdw7CBojrIhua/CABALLERIZAS%204.PNG?raw=1"
+      {
+        "src": "https://www.dropbox.com/s/kc744s4y848urw9/CABALLERIZAS%202.PNG?raw=1",
+        "srcHD": "https://www.dropbox.com/s/7kqr5x40l3newk9/CABALLERIZAS%202%20HD.jpg?raw=1"
+      },
+      {
+        "src": "https://www.dropbox.com/s/p4acv54jfm8ym3j/CABALLERIZAS%203.PNG?raw=1",
+        "srcHD": "https://www.dropbox.com/s/qlyi9q42igx8i1s/CABALLERIZAS%203%20HD.jpg?raw=1"
+      },
+      {
+        "src": "https://www.dropbox.com/s/ynadfbzmzz5d56s/CABALLERIZAS%204.PNG?raw=1",
+        "srcHD": "https://www.dropbox.com/s/pkvnzdcnt09szdr/CABALLERIZAS%204%20HD.jpg?raw=1"
+      }
     ]
   },
   {
@@ -22,11 +34,23 @@
     "construction": "273.8",
     "constructionInM2": true,
     "order": 2,
-    "mainImage": "https://www.dropbox.com/sh/4mmfi9c766j06ye/AABGDKN82CuH38lJ1UncjTl_a/BACOSA%201.PNG?raw=1",
+    "mainImage": {
+      "src": "https://www.dropbox.com/s/gjn00sbm0evo2c1/BACOSA%201.PNG?raw=1",
+      "srcHD": "https://www.dropbox.com/s/ppmhb0ttfl1jnra/BACOSA%201%20HD.jpg?raw=1"
+    },
     "images": [
-      "https://www.dropbox.com/sh/4mmfi9c766j06ye/AACMqsYj5-NLNiDECutmd7b3a/BACOSA%203.PNG?raw=1",
-      "https://www.dropbox.com/sh/4mmfi9c766j06ye/AAAi-AxmY_vthvrBxWgIDSo6a/BACOSA%202.PNG?raw=1",
-      "https://www.dropbox.com/sh/4mmfi9c766j06ye/AABT566M3SSSEcUTPWX58Cq_a/BACOSA%204.PNG?raw=1"
+      {
+        "src": "https://www.dropbox.com/s/hh7bkb8tpwusxrz/BACOSA%202.PNG?raw=1",
+        "srcHD": "https://www.dropbox.com/s/43r02mn210rvk15/BACOSA%202%20HD.jpg?raw=1"
+      },
+      {
+        "src": "https://www.dropbox.com/s/qig6f8ufa4ezvto/BACOSA%203.PNG?raw=1",
+        "srcHD": ""
+      },
+      {
+        "src": "https://www.dropbox.com/s/mzw5zukxpcq8lu1/BACOSA%204.PNG?raw=1",
+        "srcHD": ""
+      }
     ]
   },
   {
@@ -37,11 +61,54 @@
     "construction": "386.8",
     "constructionInM2": true,
     "order": 1,
-    "mainImage": "https://www.dropbox.com/sh/4mmfi9c766j06ye/AADc2MbeH0WJBZa3f1ZtI_WGa/ESPIGA%201.PNG?raw=1",
+    "mainImage": {
+      "src": "https://www.dropbox.com/s/hvxilw7p9wyo3fi/ESPIGA%201.PNG?raw=1",
+      "srcHD": "https://www.dropbox.com/s/lruobo1bv48tr3p/ESPIGA%201%20HD.jpg?raw=1"
+    },
     "images": [
-      "https://www.dropbox.com/sh/4mmfi9c766j06ye/AABdonS3BowC0dFxqYgtB693a/ESPIGA%202.PNG?raw=1",
-      "https://www.dropbox.com/sh/4mmfi9c766j06ye/AADZOjgBMxfHzxMBxx-Zw8fAa/ESPIGA%203.PNG?raw=1",
-      "https://www.dropbox.com/sh/4mmfi9c766j06ye/AAC4wRs9scXkHPnmbdum8QG1a/ESPIGA%204.PNG?raw=1"
+      {
+        "src": "https://www.dropbox.com/s/5b5lx5v6kzcf32g/ESPIGA%202.PNG?raw=1",
+        "srcHD": "https://www.dropbox.com/s/afkba8qju472729/ESPIGA%202%20HD.jpg?raw=1"
+      },
+      {
+        "src": "https://www.dropbox.com/s/2wrz47cfqbpobds/ESPIGA%203.PNG?raw=1",
+        "srcHD": "https://www.dropbox.com/s/3xe33r3l8d4zmoe/ESPIGA%203%20HD.jpg?raw=1"
+      },
+      {
+        "src": "https://www.dropbox.com/s/zr4vk0ihtbe0b2x/ESPIGA%204.PNG?raw=1",
+        "srcHD": "https://www.dropbox.com/s/l2az314bjefrblp/ESPIGA%204%20HD.jpg?raw=1"
+      },
+      {
+        "src": "https://www.dropbox.com/s/nrbdf3vryjna8gq/ESPIGA%205%20HD.jpg?raw=1",
+        "srcHD": "https://www.dropbox.com/s/nrbdf3vryjna8gq/ESPIGA%205%20HD.jpg?raw=1"
+      }
+    ]
+  },
+  {
+    "projectId": "casaValle",
+    "slug": "casa-valle",
+    "location": "Valle de Bravo, Estado de México, México",
+    "architect": "Gerardo Batres",
+    "construction": "414.7",
+    "constructionInM2": true,
+    "order": 6,
+    "mainImage": {
+      "src": "https://www.dropbox.com/s/pqhtgvjuticmqdn/VALLE%201.jpg?raw=1",
+      "srcHD": ""
+    },
+    "images": [
+      {
+        "src": "https://www.dropbox.com/s/dmxexxz9l8gp78h/VALLE%202.jpg?raw=1",
+        "srcHD": ""
+      },
+      {
+        "src": "https://www.dropbox.com/s/2x0ak9s5gvp66fy/VALLE%203.jpg?raw=1",
+        "srcHD": ""
+      },
+      {
+        "src": "https://www.dropbox.com/s/xeh8mw2otleiao5/VALLE%204.jpg?raw=1",
+        "srcHD": ""
+      }
     ]
   },
   {
@@ -52,13 +119,31 @@
     "construction": "47.3",
     "constructionInM2": true,
     "order": 5,
-    "mainImage": "https://i.ibb.co/Zhgsfvp/AMPLIACION-CALIMAYA-1.jpg",
+    "mainImage": {
+      "src": "https://i.ibb.co/Zhgsfvp/AMPLIACION-CALIMAYA-1.jpg",
+      "srcHD": ""
+    },
     "images": [
-      "https://i.ibb.co/M1CvrWX/AMPLIACION-CALIMAYA-2.jpg",
-      "https://i.ibb.co/JCbPrKc/AMPLIACION-CALIMAYA-3.jpg",
-      "https://i.ibb.co/vQ3n0MS/AMPLIACION-CALIMAYA-4.jpg",
-      "https://i.ibb.co/XVP6g1z/AMPLIACION-CALIMAYA-5.jpg",
-      "https://i.ibb.co/KGZW0Q0/AMPLIACION-CALIMAYA-6.jpg"
+      {
+        "src": "https://i.ibb.co/M1CvrWX/AMPLIACION-CALIMAYA-2.jpg",
+        "srcHD": ""
+      },
+      {
+        "src": "https://i.ibb.co/JCbPrKc/AMPLIACION-CALIMAYA-3.jpg",
+        "srcHD": ""
+      },
+      {
+        "src": "https://i.ibb.co/vQ3n0MS/AMPLIACION-CALIMAYA-4.jpg",
+        "srcHD": ""
+      },
+      {
+        "src": "https://i.ibb.co/XVP6g1z/AMPLIACION-CALIMAYA-5.jpg",
+        "srcHD": ""
+      },
+      {
+        "src": "https://i.ibb.co/KGZW0Q0/AMPLIACION-CALIMAYA-6.jpg",
+        "srcHD": ""
+      }
     ]
   },
   {
@@ -69,11 +154,27 @@
     "construction": "45.5",
     "constructionInM2": true,
     "order": 3,
-    "mainImage": "https://www.dropbox.com/sh/4mmfi9c766j06ye/AABKPPSkaegGQ2EJpHToyXFAa/ONEGA%201.PNG?raw=1",
+    "mainImage": {
+      "src": "https://www.dropbox.com/s/ktmt8hdey0q526n/ONEGA%201.PNG?raw=1",
+      "srcHD": "https://www.dropbox.com/s/cerhxkcdjo7t5r7/ONEGA%201%20HD.jpg?raw=1"
+    },
     "images": [
-      "https://www.dropbox.com/sh/4mmfi9c766j06ye/AADbaxUBE5kQ1WJSp8vcjTMxa/ONEGA%202.PNG?raw=1",
-      "https://www.dropbox.com/sh/4mmfi9c766j06ye/AAAF40uxxo47QGNW9rKdaSIda/ONEGA%203.PNG?raw=1",
-      "https://www.dropbox.com/sh/4mmfi9c766j06ye/AAAy7nSylrxcAl3koNK6QxjNa/ONEGA%204.PNG?raw=1"
+      {
+        "src": "https://www.dropbox.com/s/m8pqr2m8do0cgnt/ONEGA%202.PNG?raw=1",
+        "srcHD": ""
+      },
+      {
+        "src": "https://www.dropbox.com/s/rdeuc1goy935skv/ONEGA%203.PNG?raw=1",
+        "srcHD": ""
+      },
+      {
+        "src": "https://www.dropbox.com/s/ka17icprcioc7gx/ONEGA%204.PNG?raw=1",
+        "srcHD": ""
+      },
+      {
+        "src": "https://www.dropbox.com/s/nwsn543nqsi5jbk/ONEGA%205.jpg?raw=1",
+        "srcHD": ""
+      }
     ]
   }
 ]
