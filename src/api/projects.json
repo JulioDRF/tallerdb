@@ -8,12 +8,12 @@
     "constructionInM2": true,
     "order": 4,
     "mainImage": {
-      "src": "https://www.dropbox.com/s/vfmb6nljh8jfueg/CABALLERIZAS%201.PNG?raw=1",
+      "src": "https://www.dropbox.com/s/kc744s4y848urw9/CABALLERIZAS%201.PNG?raw=1",
       "srcHD": "https://www.dropbox.com/s/iw597xz0gw8c3m9/CABALLERIZAS%201%20HD.jpg?raw=1"
     },
     "images": [
       {
-        "src": "https://www.dropbox.com/s/kc744s4y848urw9/CABALLERIZAS%202.PNG?raw=1",
+        "src": "https://www.dropbox.com/s/vfmb6nljh8jfueg/CABALLERIZAS%202.PNG?raw=1",
         "srcHD": "https://www.dropbox.com/s/7kqr5x40l3newk9/CABALLERIZAS%202%20HD.jpg?raw=1"
       },
       {
@@ -120,28 +120,20 @@
     "constructionInM2": true,
     "order": 5,
     "mainImage": {
-      "src": "https://i.ibb.co/Zhgsfvp/AMPLIACION-CALIMAYA-1.jpg",
+      "src": "https://www.dropbox.com/s/2mz875jpkcflm20/CALIMAYA%201%20HD.jpg?raw=1",
       "srcHD": ""
     },
     "images": [
       {
-        "src": "https://i.ibb.co/M1CvrWX/AMPLIACION-CALIMAYA-2.jpg",
+        "src": "https://www.dropbox.com/s/t34jxkoa9ynbwdh/CALIMAYA%202%20HD.jpg?raw=1",
         "srcHD": ""
       },
       {
-        "src": "https://i.ibb.co/JCbPrKc/AMPLIACION-CALIMAYA-3.jpg",
+        "src": "https://www.dropbox.com/s/6zxpm312ztlxw0g/CALIMAYA%203%20HD.jpg?raw=1",
         "srcHD": ""
       },
       {
-        "src": "https://i.ibb.co/vQ3n0MS/AMPLIACION-CALIMAYA-4.jpg",
-        "srcHD": ""
-      },
-      {
-        "src": "https://i.ibb.co/XVP6g1z/AMPLIACION-CALIMAYA-5.jpg",
-        "srcHD": ""
-      },
-      {
-        "src": "https://i.ibb.co/KGZW0Q0/AMPLIACION-CALIMAYA-6.jpg",
+        "src": "https://www.dropbox.com/s/hb5xnjv74g5fg7f/CALIMAYA%204%20HD.jpg?raw=1",
         "srcHD": ""
       }
     ]

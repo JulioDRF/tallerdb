@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapGetters } from 'vuex';
 export default {
   name: 'TheHomeSlideshow',
   data() {
@@ -55,9 +55,9 @@ export default {
     }
   },
   computed: {
-    ...mapState([
-      'projects'
-    ]),
+    ...mapGetters({
+      projects: "sortedProjects",
+    }),
     currentProject() {
       return this.projects[this.currentProjectIndex];
     }
