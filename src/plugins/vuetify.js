@@ -16,12 +16,14 @@ export default new Vuetify({
         accent: colors.orange.base,
         background: colors.shades.white,
         activeTabs: colors.grey.base,
-        spinner: colors.grey.base
+        spinner: colors.grey.base,
+        link: colors.blueGrey.darken1,
       },
       dark: {
         background: colors.shades.black,
         activeTabs: colors.shades.white,
-        spinner: colors.shades.white
+        spinner: colors.shades.white,
+        link: colors.shades.white,
       }
     },
   },

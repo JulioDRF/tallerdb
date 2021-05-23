@@ -4,80 +4,75 @@
       <v-row>
         <v-col>
           <p class="contact-title">
-            {{ $t('contact') }}
+            {{ $t("contact") }}
           </p>
         </v-col>
       </v-row>
       <v-row justify="center">
-        <v-col class="min-height-50">
-          <p>
+        <div class="contact-content">
+          <p
+            v-for="contact in formsOfContact"
+            :key="contact.text"
+          >
             <a
-              href="mailto:contacto@tallerdb.com"
+              :href="contact.href"
               target="_blank"
+              :style="linkStyles"
               class="mr-025"
             >
               <v-icon :dark="darkModeEnabled">
-                {{ mdiEmail }}
+                {{ contact.icon }}
               </v-icon>
             </a>
             <a
-              href="mailto:contacto@tallerdb.com"
+              :href="contact.href"
               target="_blank"
-            >contacto@tallerdb.com</a>
+              :style="linkStyles"
+            >{{
+              contact.text
+            }}</a>
           </p>
-          <p>
-            <a
-              href="https://www.facebook.com/taIIerdb"
-              target="_blank"
-              class="mr-025"
-            >
-              <v-icon :dark="darkModeEnabled">
-                {{ mdiFacebook }}
-              </v-icon>
-            </a>
-            <a
-              href="https://www.facebook.com/taIIerdb"
-              target="_blank"
-            >taIIerDB</a>
-          </p>
-          <p>
-            <a
-              href="https://www.instagram.com/taller_db_"
-              target="_blank"
-              class="mr-025"
-            >
-              <v-icon :dark="darkModeEnabled">
-                {{ mdiInstagram }}
-              </v-icon>
-            </a>
-            <a
-              href="https://www.instagram.com/taller_db_"
-              target="_blank"
-            >taller_DB_</a>
-          </p>
-        </v-col>
+        </div>
       </v-row>
     </v-container>
   </div>
 </template>
 
 <script>
-import { mdiEmail, mdiFacebook, mdiInstagram } from '@mdi/js'
-import { mapState } from 'vuex';
+import { mdiEmail, mdiFacebook, mdiInstagram } from "@mdi/js";
+import { mapGetters, mapState } from "vuex";
 
 export default {
   name: "Contact",
   data() {
     return {
-      mdiEmail,
-      mdiFacebook,
-      mdiInstagram,
-    }
+      formsOfContact: [
+        {
+          href: "https://www.facebook.com/taIIerdb",
+          icon: mdiFacebook,
+          text: "taIIerDB",
+        },
+        {
+          href: "https://www.instagram.com/taller_db_",
+          icon: mdiInstagram,
+          text: "taller_DB_",
+        },
+        {
+          href: "mailto:contacto@tallerdb.com",
+          icon: mdiEmail,
+          text: "contacto@tallerdb.com",
+        },
+      ],
+    };
   },
   computed: {
-    ...mapState([
-      'darkModeEnabled'
-    ]),
+    ...mapState(["darkModeEnabled"]),
+    ...mapGetters(["linkColor"]),
+    linkStyles() {
+      return {
+        color: this.linkColor,
+      };
+    },
   },
 };
 </script>
@@ -91,8 +86,12 @@ export default {
   letter-spacing: 0.3em;
   margin-bottom: 1em;
 }
-.min-height-50{
+.contact-content {
   min-height: 50vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  margin-left: 1em;
 }
 .mr-025 {
   margin-right: 0.25em;
